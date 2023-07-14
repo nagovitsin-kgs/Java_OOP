@@ -3,7 +3,7 @@ package Terms_Code;
 public class Program_03 {
 
     public static void main(String[] args) {
-
+// Конструкторы выполняют инициализацию объекта!
         Person3 bob = new Person3(); // вызов первого конструктора без параметров
         bob.displayInfo(); // Name: Undefined Age: 18
 

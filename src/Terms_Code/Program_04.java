@@ -11,7 +11,7 @@ public class Program_04 {
         tom.displayInfo(); // Name: Tom Age: 18
 
         Person4 sam = new Person4("Sam", 25);
-        sam.displayInfo(); // Name: Tom Age: 18
+        sam.displayInfo(); // Name: Sam Age: 25
     }
 }
 

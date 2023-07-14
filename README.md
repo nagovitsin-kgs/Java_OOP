@@ -22,6 +22,8 @@
 
     [Program_04](/src/Terms_Code/Program_04.java) Объекты (Ключевое слово this)
 
+    [Program_05](/src/Terms_Code/Program_05.java) Объекты (Инициализаторы)
+
 *   ## [Пакеты](https://metanit.com/java/tutorial/3.2.php)
 
 *   [Модификаторы доступа и инкапсуляция](https://metanit.com/java/tutorial/3.3.php)
