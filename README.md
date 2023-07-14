@@ -1,20 +1,57 @@
-## Getting Started
+# Объектно-ориентированное программирование (лекции).
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+-   [Presentation_Lesson_01.md](/src/Lesson_01/Presentation_Lesson_01.md)
 
-## Folder Structure
+-   [Презентация Лекция 1](https://drive.google.com/file/d/1gY4M4rShrSXk5BOMn2ypgggLddZ_3EUi/view?usp=drive_link)
 
-The workspace contains two folders by default, where:
+-   []()
 
--   `src`: the folder to maintain sources
--   `lib`: the folder to maintain dependencies
+-   []()
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+-   []()
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+# [Глава 3. Классы. Объектно-ориентированное программирование.](https://metanit.com/java/tutorial/3.1.php)
 
-## Dependency Management
+-   ## [Классы и объекты](https://metanit.com/java/tutorial/3.1.php)
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+    [Program_01](/src/Terms_Code/Program_01.java) Классы
 
-///////////
+    [Program_02](/src/Terms_Code/Program_02.java) Объекты (Конструкторы)
+
+*   ## [Пакеты](https://metanit.com/java/tutorial/3.2.php)
+
+*   [Модификаторы доступа и инкапсуляция](https://metanit.com/java/tutorial/3.3.php)
+
+    [Program_05](/src/Terms_Code/Program_05.java) Модификаторы доступа
+
+    [Program_06](/src/Terms_Code/Program_06.java) Инкапсуляция
+
+*   [Статические члены и модификатор static](https://metanit.com/java/tutorial/3.4.php)
+
+*   [Объекты как параметры методов](https://metanit.com/java/tutorial/3.14.php)
+
+*   [Внутренние и вложенные классы](https://metanit.com/java/tutorial/3.12.php)
+
+*   [Наследование](https://metanit.com/java/tutorial/3.5.php)
+
+*   [Абстрактные классы](https://metanit.com/java/tutorial/3.6.php)
+
+*   [Иерархия наследования и преобразование типов](https://metanit.com/java/tutorial/3.10.php)
+
+*   [Интерфейсы](https://metanit.com/java/tutorial/3.7.php)
+
+*   [Интерфейсы в механизме обратного вызова](https://metanit.com/java/tutorial/3.16.php)
+
+*   [Перечисления enum](https://metanit.com/java/tutorial/3.8.php)
+
+*   [Класс Object и его методы](https://metanit.com/java/tutorial/3.9.php)
+
+*   [Обобщения (Generics)](https://metanit.com/java/tutorial/3.11.php)
+
+*   [Ограничения обобщений](https://metanit.com/java/tutorial/3.17.php)
+
+*   [Наследование и обобщения](https://metanit.com/java/tutorial/3.15.php)
+
+*   [Ссылочные типы и клонирование объектов](https://metanit.com/java/tutorial/3.13.php)
+
+*   [Records](https://metanit.com/java/tutorial/3.18.php)
