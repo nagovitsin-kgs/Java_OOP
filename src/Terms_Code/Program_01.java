@@ -27,7 +27,7 @@ public class Program_01 {
      */
     public static void main(String[] args) {
 
-        Person kate = new Person("Kate", 32, "Baker Street", "+12334567");
+        Person1 kate = new Person1("Kate", 32, "Baker Street", "+12334567");
         kate.displayName(); // норм, метод public // => Name: Kate
         kate.displayAge(); // норм, метод имеет модификатор по умолчанию // => Age: 32
         kate.displayPhone(); // норм, метод protected // => Phone: +12334567
