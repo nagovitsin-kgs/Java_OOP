@@ -24,40 +24,42 @@
 
     [Program_05](/src/Terms_Code/Program_05.java) Объекты (Инициализаторы)
 
-*   ## [Пакеты](https://metanit.com/java/tutorial/3.2.php)
+-   ## [Пакеты](https://metanit.com/java/tutorial/3.2.php)
 
-*   [Модификаторы доступа и инкапсуляция](https://metanit.com/java/tutorial/3.3.php)
+    [Program](/src/Terms_Code/study/Program.java) package название_пакета;
+
+-   ## [Модификаторы доступа и инкапсуляция](https://metanit.com/java/tutorial/3.3.php)
 
     [Program_05](/src/Terms_Code/Program_05.java) Модификаторы доступа
 
     [Program_06](/src/Terms_Code/Program_06.java) Инкапсуляция
 
-*   [Статические члены и модификатор static](https://metanit.com/java/tutorial/3.4.php)
+-   ## [Статические члены и модификатор static](https://metanit.com/java/tutorial/3.4.php)
 
-*   [Объекты как параметры методов](https://metanit.com/java/tutorial/3.14.php)
+-   ## [Объекты как параметры методов](https://metanit.com/java/tutorial/3.14.php)
 
-*   [Внутренние и вложенные классы](https://metanit.com/java/tutorial/3.12.php)
+-   ## [Внутренние и вложенные классы](https://metanit.com/java/tutorial/3.12.php)
 
-*   [Наследование](https://metanit.com/java/tutorial/3.5.php)
+-   ## [Наследование](https://metanit.com/java/tutorial/3.5.php)
 
-*   [Абстрактные классы](https://metanit.com/java/tutorial/3.6.php)
+-   ## [Абстрактные классы](https://metanit.com/java/tutorial/3.6.php)
 
-*   [Иерархия наследования и преобразование типов](https://metanit.com/java/tutorial/3.10.php)
+-   ## [Иерархия наследования и преобразование типов](https://metanit.com/java/tutorial/3.10.php)
 
-*   [Интерфейсы](https://metanit.com/java/tutorial/3.7.php)
+-   ## [Интерфейсы](https://metanit.com/java/tutorial/3.7.php)
 
-*   [Интерфейсы в механизме обратного вызова](https://metanit.com/java/tutorial/3.16.php)
+-   ## [Интерфейсы в механизме обратного вызова](https://metanit.com/java/tutorial/3.16.php)
 
-*   [Перечисления enum](https://metanit.com/java/tutorial/3.8.php)
+-   ## [Перечисления enum](https://metanit.com/java/tutorial/3.8.php)
 
-*   [Класс Object и его методы](https://metanit.com/java/tutorial/3.9.php)
+-   ## [Класс Object и его методы](https://metanit.com/java/tutorial/3.9.php)
 
-*   [Обобщения (Generics)](https://metanit.com/java/tutorial/3.11.php)
+-   ## [Обобщения (Generics)](https://metanit.com/java/tutorial/3.11.php)
 
-*   [Ограничения обобщений](https://metanit.com/java/tutorial/3.17.php)
+-   ## [Ограничения обобщений](https://metanit.com/java/tutorial/3.17.php)
 
-*   [Наследование и обобщения](https://metanit.com/java/tutorial/3.15.php)
+-   ## [Наследование и обобщения](https://metanit.com/java/tutorial/3.15.php)
 
-*   [Ссылочные типы и клонирование объектов](https://metanit.com/java/tutorial/3.13.php)
+-   ## [Ссылочные типы и клонирование объектов](https://metanit.com/java/tutorial/3.13.php)
 
-*   [Records](https://metanit.com/java/tutorial/3.18.php)
+-   ## [Records](https://metanit.com/java/tutorial/3.18.php)
