@@ -16,7 +16,11 @@
 
     [Program_01](/src/Terms_Code/Program_01.java) Классы
 
-    [Program_02](/src/Terms_Code/Program_02.java) Объекты (Конструкторы)
+    [Program_02](/src/Terms_Code/Program_02.java) Объекты (Конструкторы = 1)
+
+    [Program_03](/src/Terms_Code/Program_03.java) Объекты (Констркуторы > 1)
+
+    [Program_04](/src/Terms_Code/Program_04.java) Объекты (Ключевое слово this)
 
 *   ## [Пакеты](https://metanit.com/java/tutorial/3.2.php)
 
