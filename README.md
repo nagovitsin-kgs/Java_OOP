@@ -26,13 +26,15 @@
 
 -   ## [Пакеты](https://metanit.com/java/tutorial/3.2.php)
 
-    [Program](/src/Terms_Code/study/Program.java) package название_пакета;
+    [Program_06](/src/Terms_Code/study/Program_06.java) package название_пакета;
+
+    [Program_07](/src/Terms_Code/study/Program_07.java) Импорт пакетов и классов
 
 -   ## [Модификаторы доступа и инкапсуляция](https://metanit.com/java/tutorial/3.3.php)
 
-    [Program_05](/src/Terms_Code/Program_05.java) Модификаторы доступа
+    [Program_20]() Модификаторы доступа
 
-    [Program_06](/src/Terms_Code/Program_06.java) Инкапсуляция
+    [Program_21]() Инкапсуляция
 
 -   ## [Статические члены и модификатор static](https://metanit.com/java/tutorial/3.4.php)
 

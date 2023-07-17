@@ -50,7 +50,7 @@ public class Program_20 {
  * соответствующем файле. На основе этих строк будут создаваться объекты.
  * Члены класса — это основные элементы, которые может содержать в себе класс.
  */
-class Person21 {
+class Person20 {
 
     String name;
     protected int age;
@@ -69,7 +69,7 @@ class Person21 {
      * phone.
      * В теле ссылка (this) в этом классе на переменные с присвоением.
      */
-    public Person21(String name, int age, String address, String phone) {
+    public Person20(String name, int age, String address, String phone) {
         this.name = name;
         this.age = age;
         this.address = address;

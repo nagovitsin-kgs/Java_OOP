@@ -1,5 +1,7 @@
 package Terms_Code;
 
+//import Terms_Code.Program_01;
+
 public class Program_01 {
 
     public static void main(String[] args) {
@@ -11,7 +13,7 @@ public class Program_01 {
     }
 }
 
-class Person20 {
+class Person1 {
 
     String name; // имя
     int age; // возраст

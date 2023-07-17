@@ -48,21 +48,21 @@ package Terms_Code.study;
  * java Terms_Code.study.Program
  * Так почемуто не работает!))
  */
-public class Program {
+public class Program_06 {
 
     public static void main(String[] args) {
 
-        Person kate = new Person("Kate", 32);
+        Person6 kate = new Person6("Kate", 32);
         kate.displayInfo();
     }
 }
 
-class Person {
+class Person6 {
 
     String name;
     int age;
 
-    Person(String name, int age) {
+    Person6(String name, int age) {
         this.name = name;
         this.age = age;
     }
