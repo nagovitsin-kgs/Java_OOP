@@ -30,11 +30,15 @@
 
     [Program_07](/src/Terms_Code/study/Program_07.java) Импорт пакетов и классов
 
+    [Program_08](/src/Terms_Code/study/Program_08.java) Статический импорт
+
 -   ## [Модификаторы доступа и инкапсуляция](https://metanit.com/java/tutorial/3.3.php)
 
-    [Program_20]() Модификаторы доступа
+    [Program_09](/src/Terms_Code/Program_09.java) Модификаторы доступа
 
-    [Program_21]() Инкапсуляция
+    [Схема Modifier](/src/Terms_Code/Modifier.png)
+
+    [Program_10](/src/Terms_Code/Program_10.java) Инкапсуляция
 
 -   ## [Статические члены и модификатор static](https://metanit.com/java/tutorial/3.4.php)
 

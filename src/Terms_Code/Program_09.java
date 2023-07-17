@@ -16,7 +16,7 @@ package Terms_Code;
  * public.
  * Закрытый класс или член класса доступен только из кода в том же классе.
  */
-public class Program_20 {
+public class Program_09 {
     /**
      * Ключевое слово main() - основной метод.
      * Это - строка, с которой начинается выполнение программы.
@@ -27,7 +27,7 @@ public class Program_20 {
      */
     public static void main(String[] args) {
 
-        Person20 kate = new Person20("Kate", 32, "Baker Street", "+12334567");
+        Person9 kate = new Person9("Kate", 32, "Baker Street", "+12334567");
         kate.displayName(); // норм, метод public // => Name: Kate
         kate.displayAge(); // норм, метод имеет модификатор по умолчанию // => Age: 32
         kate.displayPhone(); // норм, метод protected // => Phone: +12334567
@@ -50,7 +50,7 @@ public class Program_20 {
  * соответствующем файле. На основе этих строк будут создаваться объекты.
  * Члены класса — это основные элементы, которые может содержать в себе класс.
  */
-class Person20 {
+class Person9 {
 
     String name;
     protected int age;
@@ -69,7 +69,7 @@ class Person20 {
      * phone.
      * В теле ссылка (this) в этом классе на переменные с присвоением.
      */
-    public Person20(String name, int age, String address, String phone) {
+    public Person9(String name, int age, String address, String phone) {
         this.name = name;
         this.age = age;
         this.address = address;

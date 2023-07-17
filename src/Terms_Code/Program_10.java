@@ -1,10 +1,20 @@
 package Terms_Code;
 
-public class Program_21 {
+/**
+ * Инкапсуляция – это свойство системы, позволяющее объединить данные и методы,
+ * работающие с ними в классе, скрыв детали реализации и защитив от пользователя
+ * этого класса объектов.
+ * 
+ * Использование различных модификаторов гарантирует, что данные не будут
+ * искажены или изменены не надлежащим образом. Подобное сокрытие данных внутри
+ * некоторой области видимости называется инкапсуляцией.(c помощью модификаторов
+ * доступа)
+ */
+public class Program_10 {
 
     public static void main(String[] args) {
 
-        Person21 kate = new Person21("Kate", 30); // конструктор, коллекция
+        Person10 kate = new Person10("Kate", 30); // конструктор, коллекция
         System.out.println(kate.getAge()); // 30
         kate.setAge(33);
         System.out.println(kate.getAge()); // 33
@@ -17,7 +27,7 @@ public class Program_21 {
     }
 }
 
-class Person21 {
+class Person10 {
 
     private String name;
     private int age = 1;
@@ -28,7 +38,7 @@ class Person21 {
         return String.format("%s %d", name, age);
     }
 
-    public Person21(String name, int age) {
+    public Person10(String name, int age) {
 
         setName(name);
         setAge(age);
