@@ -60,6 +60,12 @@
 
 -   ## [Внутренние и вложенные классы](https://metanit.com/java/tutorial/3.12.php)
 
+    [Program_18](/src/Terms_Code/Program_18.java) Внутренние и вложенные классы
+
+    [Program_19](/src/Terms_Code/Program_19.java) Внутренние и вложенные классы
+
+    [Program_20](/src/Terms_Code/Program_20.java) Класс [Math20](/src/Terms_Code/Math20.java) (Факториал) Статические вложенные классы
+
 -   ## [Наследование](https://metanit.com/java/tutorial/3.5.php)
 
 -   ## [Абстрактные классы](https://metanit.com/java/tutorial/3.6.php)
