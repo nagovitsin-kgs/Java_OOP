@@ -42,7 +42,21 @@
 
 -   ## [Статические члены и модификатор static](https://metanit.com/java/tutorial/3.4.php)
 
+    [Program_11](/src/Terms_Code/Program_11.java) Статические поля
+
+    [Program_12](/src/Terms_Code/Program_12.java) Статические константы
+
+    [Program_13](/src/Terms_Code/Program_13.java) Статические инициализаторы
+
+    [Program_14](/src/Terms_Code/Program_14.java) Статические методы
+
+    [Program_15](/src/Terms_Code/Program_15.java) Статические методы
+
 -   ## [Объекты как параметры методов](https://metanit.com/java/tutorial/3.14.php)
+
+    [Program_16](/src/Terms_Code/Program_16.java) Объекты классов, могут передаваться в методы (Изменится name)
+
+    [Program_17](/src/Terms_Code/Program_17.java) Объекты классов, могут передаваться в методы (Не Изменится name)
 
 -   ## [Внутренние и вложенные классы](https://metanit.com/java/tutorial/3.12.php)
 
