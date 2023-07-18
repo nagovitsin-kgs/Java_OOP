@@ -72,9 +72,21 @@
 
     [Person21](/src/Terms_Code/Person21.java) Класс (базовый, родительский, суперкласс)
 
-    [Employee21](/src/Terms_Code/Employee21.java) Класс (производный, наследник, подкласс)
+    [Employee21](/src/Terms_Code/Employee21.java) Класс (производный, наследник, подкласс) extends [Person21](/src/Terms_Code/Person21.java)
 
-    [Program_21](/src/Terms_Code/Program_21.java) Использование классов
+    [Program_21](/src/Terms_Code/Program_21.java) Использование классов Person21 и Employee21
+
+    [Employee22](/src/Terms_Code/Employee22.java) Класс (производный, наследник, подкласс) extends [Person21](/src/Terms_Code/Person21.java)
+
+    [Program_22](/src/Terms_Code/Program_22.java) Использование классов Person21 и Employee22
+
+    [Program_23](/src/Terms_Code/Program_23.java) Наследование (Переопределение методов)
+
+    [Program_24](/src/Terms_Code/Program_24.java) Наследование (Переопределение методов)
+
+    [Program_25](/src/Terms_Code/Program_25.java) Запрет наследования, запрет переопределения методов
+
+    [Program_26](/src/Terms_Code/Program_26.java) Динамическая диспетчеризация методов (Наследование и возможность переопределения методов)
 
 -   ## [Абстрактные классы](https://metanit.com/java/tutorial/3.6.php)
 

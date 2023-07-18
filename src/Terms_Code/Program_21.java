@@ -1,7 +1,7 @@
 package Terms_Code;
 // Наследование.
 
-// Использование классов:
+// Использование классов Person21 и Employee21:
 
 public class Program_21 {
     public static void main(String[] args) {

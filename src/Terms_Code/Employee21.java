@@ -37,5 +37,6 @@ public class Employee21 extends Person21 {
     public Employee21(String name) {
         super(name); // если базовый класс определяет конструктор
                      // то производный класс должен его вызвать
+        // super(name) -это вызов конструктора базового класса Person21.
     }
 }
