@@ -90,7 +90,9 @@
 
 -   ## [Абстрактные классы](https://metanit.com/java/tutorial/3.6.php)
 
-    [Program_27]() Абстрактные классы и методы
+    [Program_27](/src/Terms_Code/Program_27.java) Абстрактные классы и методы
+
+    [Program_28](/src/Terms_Code/Program_28.java) Абстрактные классы и методы
 
 -   ## [Иерархия наследования и преобразование типов](https://metanit.com/java/tutorial/3.10.php)
 
