@@ -70,6 +70,12 @@
 
 -   ## [Наследование](https://metanit.com/java/tutorial/3.5.php)
 
+    [Person21](/src/Terms_Code/Person21.java) Класс (базовый, родительский, суперкласс)
+
+    [Employee21](/src/Terms_Code/Employee21.java) Класс (производный, наследник, подкласс)
+
+    [Program_21](/src/Terms_Code/Program_21.java) Использование классов
+
 -   ## [Абстрактные классы](https://metanit.com/java/tutorial/3.6.php)
 
 -   ## [Иерархия наследования и преобразование типов](https://metanit.com/java/tutorial/3.10.php)
