@@ -105,6 +105,8 @@
 
     [Program_31](/src/Terms_Code/Program_31.java) Определение интерфейса (interface => для использование => ключевое слово implements)
 
+    [Program_32](/src/Terms_Code/Program_32.java) Динамическое создание объектов с типом интерфейс в программе как экземпляры обоих классов
+
 -   ## [Интерфейсы в механизме обратного вызова](https://metanit.com/java/tutorial/3.16.php)
 
 -   ## [Перечисления enum](https://metanit.com/java/tutorial/3.8.php)
