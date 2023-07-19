@@ -121,6 +121,8 @@
 
     [Program_39](/src/Terms_Code/Program_39.java) Наследование интерфейсов
 
+    [Program_40](/src/Terms_Code/Program_40.java) Вложенные интерфейсы
+
 -   ## [Интерфейсы в механизме обратного вызова](https://metanit.com/java/tutorial/3.16.php)
 
 -   ## [Перечисления enum](https://metanit.com/java/tutorial/3.8.php)
