@@ -119,6 +119,8 @@
 
     [Program_38](/src/Terms_Code/Program_38.java) Множественная реализация интерфейсов
 
+    [Program_39](/src/Terms_Code/Program_39.java) Наследование интерфейсов
+
 -   ## [Интерфейсы в механизме обратного вызова](https://metanit.com/java/tutorial/3.16.php)
 
 -   ## [Перечисления enum](https://metanit.com/java/tutorial/3.8.php)
