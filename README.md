@@ -4,11 +4,11 @@
 
 -   [Presentation_Lesson_01.md](/src/Lesson_01/Presentation_Lesson_01.md)
 
--   [Презентация Лекция 1](https://drive.google.com/file/d/1gY4M4rShrSXk5BOMn2ypgggLddZ_3EUi/view?usp=drive_link) Введение в ООП. Концепты и свои типы. (Введение, Класс и его экземпляры, ООП, Инкапсуляция, Наследование, Полиморфизм)
+-   [Презентация Лекция 1](https://drive.google.com/file/d/1gY4M4rShrSXk5BOMn2ypgggLddZ_3EUi/view?usp=sharing) Введение в ООП. Концепты и свои типы. (Введение, Класс и его экземпляры, ООП, Инкапсуляция, Наследование, Полиморфизм)
 
--   [Презентация Лекция 2](https://drive.google.com/file/d/1wAGMCNdbfRPxq35RPRJVowidxpVJ1ApQ/view?usp=drive_link) ООП: Абстракция и интерфейсы
+-   [Презентация Лекция 2](https://drive.google.com/file/d/1wAGMCNdbfRPxq35RPRJVowidxpVJ1ApQ/view?usp=sharing) ООП: Абстракция и интерфейсы
 
--   [Презентация Лекция 3](https://drive.google.com/file/d/1HUDDj1IAmK0qRlJ2kEaqyKR42SrrCBpX/view?usp=drive_link) Некоторые
+-   [Презентация Лекция 3](https://drive.google.com/file/d/1HUDDj1IAmK0qRlJ2kEaqyKR42SrrCBpX/view?usp=sharing) Некоторые
     стандартные интерфейсы: (Введение, Iterator\<E>, Comparator\<E>, Comparable,
     equals, ==)
 
