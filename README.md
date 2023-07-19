@@ -109,6 +109,8 @@
 
     [Program_33](/src/Terms_Code/Program_33.java) Интерфейсы в преобразованиях типов
 
+    [Program_34](/src/Terms_Code/Program_34.java) Методы по умолчанию в интерфейсах
+
 -   ## [Интерфейсы в механизме обратного вызова](https://metanit.com/java/tutorial/3.16.php)
 
 -   ## [Перечисления enum](https://metanit.com/java/tutorial/3.8.php)
