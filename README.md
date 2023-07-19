@@ -113,6 +113,8 @@
 
     [Program_35](/src/Terms_Code/Program_35.java) Статические методы в интерфейсах
 
+    [Program_36](/src/Terms_Code/Program_36.java) Приватные методы в интерфейсах
+
 -   ## [Интерфейсы в механизме обратного вызова](https://metanit.com/java/tutorial/3.16.php)
 
 -   ## [Перечисления enum](https://metanit.com/java/tutorial/3.8.php)
