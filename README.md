@@ -96,7 +96,14 @@
 
 -   ## [Иерархия наследования и преобразование типов](https://metanit.com/java/tutorial/3.10.php)
 
+    [Program_29](/src/Terms_Code/Program_29.java) Иерархия наследования и преобразование типов
+    [Сlass_Hierarchy](/src/Terms_Code/Сlass_Hierarchy.png)
+
+    [Program_30](/src/Terms_Code/Program_30.java) Оператор instanceof (проверяет, является ли переменная объектом типа)
+
 -   ## [Интерфейсы](https://metanit.com/java/tutorial/3.7.php)
+
+    [Program_31](/src/Terms_Code/Program_31.java) Определение интерфейса (interface => для использование => ключевое слово implements)
 
 -   ## [Интерфейсы в механизме обратного вызова](https://metanit.com/java/tutorial/3.16.php)
 
