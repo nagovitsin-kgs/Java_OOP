@@ -123,6 +123,8 @@
 
     [Program_40](/src/Terms_Code/Program_40.java) Вложенные интерфейсы
 
+    [Program_41](/src/Terms_Code/Program_41.java) Интерфейсы как параметры и результаты методов
+
 -   ## [Интерфейсы в механизме обратного вызова](https://metanit.com/java/tutorial/3.16.php)
 
 -   ## [Перечисления enum](https://metanit.com/java/tutorial/3.8.php)
