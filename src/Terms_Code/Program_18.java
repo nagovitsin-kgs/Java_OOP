@@ -35,7 +35,7 @@ public class Program_18 {
 class Person18 { // внешний класс
 
     private String name;
-    Account account; // определяем внктренний вложенный класс
+    Account account; // определяем внутренний вложенный класс
 
     Person18(String name, String password) {
         this.name = name;

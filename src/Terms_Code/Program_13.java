@@ -52,7 +52,7 @@ class Person13 {
         return String.format("%d ", id);
     }
 
-    // статический инициализвтор:
+    // статический инициализатор:
     static {
         counter = 105;
         System.out.println("Static initializer");
