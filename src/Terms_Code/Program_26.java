@@ -41,10 +41,18 @@ public class Program_26 {
     }
 }
 
+/**
+ * Это класс Person26 с переменной name
+ */
 class Person26 {
 
     String name;
 
+    /**
+     * Это констуктор
+     * 
+     * @param name это переменнная
+     */
     public String getName() {
         return name;
     }
