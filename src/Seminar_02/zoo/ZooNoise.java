@@ -3,7 +3,7 @@ package Seminar_02.zoo;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ZooNoise {
+public class ZooNoise { // базовый класс для конструктора
     private List<Speakable> noise;
 
     public ZooNoise() {
@@ -11,6 +11,7 @@ public class ZooNoise {
         noise.add(new Dog());
         noise.add(new Cat());
         noise.add(new Radio());
+
     }
 
     public void speakAll() {

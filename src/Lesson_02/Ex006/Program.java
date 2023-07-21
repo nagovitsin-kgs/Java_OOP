@@ -1,11 +1,13 @@
 package Lesson_02.Ex006;
 
+import java.io.Writer;
+
 import Lesson_02.Ex006.Applications.Notepad;
 import Lesson_02.Ex006.Format.*;
 
 public class Program {
     public static void main(String[] args) {
-        
+
         Notepad notes = new Notepad();
         notes.newFile();
         notes.currentDocument().addAllText("text1");
@@ -14,8 +16,6 @@ public class Program {
         notes.SaveAs("file1", new Txt());
         notes.SaveAs("file2", new Md());
         notes.SaveAs("file3", new Doc());
-
-
 
     }
 }
