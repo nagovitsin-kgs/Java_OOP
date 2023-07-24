@@ -2,8 +2,6 @@ package Homeworks.Family_tree;
 
 import java.util.*;
 
-import Homeworks.Family_tree.Applications.FileProcessing;
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("\nЗадание к уроку 1:________________________________\n");
