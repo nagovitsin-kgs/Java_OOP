@@ -1,4 +1,4 @@
-package Homeworks.family_tree;
+package Homeworks.family_tree.family_tree;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import Homeworks.family_tree.Person.Human;
+import Homeworks.family_tree.person.Human;
 
 public class FamilyTree implements Serializable {
     private List<Human> people;

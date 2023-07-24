@@ -1,4 +1,4 @@
-package Homeworks.family_tree.Person;
+package Homeworks.family_tree.person;
 
 import java.io.Serializable;
 

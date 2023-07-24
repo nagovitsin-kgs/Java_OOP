@@ -2,11 +2,12 @@ package Homeworks.family_tree;
 
 import java.util.*;
 
-import Homeworks.family_tree.Person.Gender;
-import Homeworks.family_tree.Person.Human;
-import Homeworks.family_tree.DataFixation.FileProcessing;
+import Homeworks.family_tree.data_fixation.FileProcessing;
+import Homeworks.family_tree.family_tree.FamilyTree;
+import Homeworks.family_tree.person.Gender;
+import Homeworks.family_tree.person.Human;
 
-public class Main {
+public class Program {
     public static void main(String[] args) {
         System.out.println("\nЗадание к уроку 1:________________________________\n");
 
@@ -42,7 +43,7 @@ public class Main {
         System.out.println("\nЗадание к уроку 2:________________________________\n");
 
         // Создание пути или обращение к уже созанному файлу
-        String filePath = "src/Homeworks/family_tree/Files/familyTree.out";
+        String filePath = "src/Homeworks/family_tree/files/familyTree.out";
 
         // Создали конструкто класса, который implements интерфейсы WritingFile,
         // ReadingFile
