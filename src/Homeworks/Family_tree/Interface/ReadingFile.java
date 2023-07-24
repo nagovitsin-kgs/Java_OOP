@@ -1,4 +1,4 @@
-package Homeworks.Family_tree.Interface;
+package Homeworks.family_tree.Interface;
 
 /**
  * Интерфейс: Чтение файла

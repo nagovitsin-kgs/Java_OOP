@@ -1,6 +1,10 @@
-package Homeworks.Family_tree;
+package Homeworks.family_tree;
 
 import java.util.*;
+
+import Homeworks.family_tree.Person.Gender;
+import Homeworks.family_tree.Person.Human;
+import Homeworks.family_tree.DataFixation.FileProcessing;
 
 public class Main {
     public static void main(String[] args) {

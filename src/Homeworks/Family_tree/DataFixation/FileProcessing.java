@@ -1,4 +1,4 @@
-package Homeworks.Family_tree;
+package Homeworks.family_tree.DataFixation;
 
 // import java.io.*; // либо
 import java.io.FileInputStream;
@@ -7,8 +7,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-import Homeworks.Family_tree.Interface.ReadingFile;
-import Homeworks.Family_tree.Interface.WritingFile;
+import Homeworks.family_tree.Interface.ReadingFile;
+import Homeworks.family_tree.Interface.WritingFile;
 
 /**
  * Класс обработка файлов
