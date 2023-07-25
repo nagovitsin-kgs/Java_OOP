@@ -9,40 +9,81 @@ import java.util.Map;
 import Homeworks.family_tree.person.Human;
 
 public class FamilyTree implements Serializable {
-    private List<Human> people;
+    private int humanId;
+    private List<Human> peopleList;
     private Map<Human, List<Human>> relationships;
 
-    @Override
-    public String toString() {
-        return "FamilyTree [\npeople=" + people + ", \nrelationships=" + relationships + "\n]";
+    // Можно только так:
+    // public FamilyTree() {
+    // this.people = new ArrayList<>();
+    // this.relationships = new HashMap<>();
+    // }
+    // А лучше, наверно, так:
+    /**
+     * Создание экземпляра класса, в котором:
+     * 
+     * @param people        - значение параметра people присваивается полю people
+     * @param relationships - значение параметра relationships присваивается полю
+     *                      relationships
+     */
+    public FamilyTree(List<Human> people, Map<Human, List<Human>> relationships) {
+        this.peopleList = people;
+        this.relationships = relationships;
     }
 
-    public FamilyTree() { // правая часть конструктора в Main
-        this.people = new ArrayList<>();
-        this.relationships = new HashMap<>();
+    /**
+     * Создание экземпляра класса, в котором мы обращаемся к конструктору или
+     * экземпляру класса и присваиваем в значение пустой конструктор (две коллекции)
+     */
+    public FamilyTree() {
+        this(new ArrayList<>(), new HashMap<>());
     }
 
-    public void addPerson(Human person) {
-        people.add(person);
+    public int getHumanId() {
+        return humanId;
     }
 
-    public void addParentChildRelationships(Human parent, Human child) {
+    public void setHumanId(int humanId) {
+        this.humanId = humanId;
+    }
+
+    public boolean addPerson(Human person) {
+        if (person == null) {
+            return false;
+        }
+        if (!peopleList.contains(person)) {
+            peopleList.add(person);
+            person.setId(humanId++);
+
+            return true;
+        }
+        return false;
+    }
+
+    public boolean addParentChildRelationships(Human parent, Human child) {
+        if (parent == null) {
+
+            return false;
+        }
         if (!relationships.containsKey(parent)) {
             relationships.put(parent, new ArrayList<>());
+            relationships.get(parent).add(child);
+            return true;
         }
-        relationships.get(parent).add(child);
+        return false;
     }
 
     public List<Human> getChildren(Human person) {
+
         return relationships.getOrDefault(person, new ArrayList<>());
     }
 
-    public List<Human> getPeople() {
-        return people;
+    public List<Human> getPeopleList() {
+        return peopleList;
     }
 
-    public void setPeople(List<Human> people) {
-        this.people = people;
+    public void setPeopleList(List<Human> people) {
+        this.peopleList = people;
     }
 
     public Map<Human, List<Human>> getRelationships() {
@@ -51,5 +92,10 @@ public class FamilyTree implements Serializable {
 
     public void setRelationships(Map<Human, List<Human>> relationships) {
         this.relationships = relationships;
+    }
+
+    @Override
+    public String toString() {
+        return "FamilyTree [\npeople=" + peopleList + ", \nrelationships=" + relationships + "\n]";
     }
 }

@@ -1,5 +1,6 @@
 package Homeworks.family_tree;
 
+import java.time.LocalDate;
 import java.util.*;
 
 import Homeworks.family_tree.data_fixation.FileProcessing;
@@ -15,28 +16,27 @@ public class Program {
         FamilyTree familyTree = new FamilyTree();
 
         // Создание людей для добавления в генеалогическое древо
-        Human person1 = new Human("John", Gender.MALE);
-        Human person2 = new Human("Jane", Gender.FEMALE);
-        Human person3 = new Human("Bob", Gender.MALE);
-        Human person4 = new Human("Alice", Gender.FEMALE);
+        Human john = new Human("Джон", Gender.MALE, LocalDate.of(1974, 7, 10));
+        Human jane = new Human("Джейн", Gender.FEMALE, LocalDate.of(1979, 6, 12));
+        Human bob = new Human("Боб", Gender.MALE, LocalDate.of(1989, 3, 5));
+        Human alice = new Human("Алиса", Gender.FEMALE, LocalDate.of(2001, 1, 1));
 
         // Добавление людей в генеалогическое древо
-        familyTree.addPerson(person1);
-        familyTree.addPerson(person2);
-        familyTree.addPerson(person3);
-        familyTree.addPerson(person4);
+        familyTree.addPerson(john);
+        familyTree.addPerson(jane);
+        familyTree.addPerson(bob);
+        familyTree.addPerson(alice);
 
         // Создание связей между людьми в генеалогическом древе
-        familyTree.addParentChildRelationships(person1, person3);
-        familyTree.addParentChildRelationships(person2, person3);
-        familyTree.addParentChildRelationships(person3, person4);
+        familyTree.addParentChildRelationships(john, bob);
+        familyTree.addParentChildRelationships(jane, bob);
+        familyTree.addParentChildRelationships(bob, alice);
 
         // Получение всех детей выбранного человека
-        Human selectedPerson = person3;
-        List<Human> children = familyTree.getChildren(selectedPerson);
-        System.out.println("Children of " + selectedPerson.getName() + ":"); // Children of Bob:
+        List<Human> children = familyTree.getChildren(bob);
+        System.out.println("Дети " + bob.getName() + "а" + ":"); // Дети Боба:
         for (Human child : children) {
-            System.out.println(child.getName() + "\n"); // Alice
+            System.out.println(child.getName() + "\n"); // Алиса
         }
         System.out.println(familyTree); // сделал переопределения метода toString в классах
 
