@@ -5,10 +5,14 @@ import java.time.LocalDate;
 import java.util.List;
 
 /**
- * public Human(String name, Gender gender, LocalDate dateOfBirth, LocalDate
+ * Экземпляр класса: public Human(String name, Gender gender, LocalDate
+ * dateOfBirth, LocalDate
  * dateOfDeath)
+ * 
+ * Класс: public class Human implements Serializable, Comparable<Human>
  */
-public class Human implements Serializable {
+
+public class Human implements Serializable, Comparable<Human> {
     // Создание полей в классе
     private int id;
     private String name;
@@ -92,10 +96,45 @@ public class Human implements Serializable {
         this.dateOfDeath = dateOfDeath;
     }
 
+    // сгенерировал - переопределение метода toString для вывода
     @Override
     public String toString() {
         return "Human [id=" + id + ", name=" + name + ", gender=" + gender + ", dateOfBirth=" + dateOfBirth
                 + ", dateOfDeath=" + dateOfDeath + "]";
+    }
+
+    // переопределение и реализация метода интерфейса Comparable для типа Human
+    @Override
+    public int compareTo(Human o) {
+        return name.compareTo(o.name);
+    }
+
+    // сгенирировался, пока не знаю зачем ???)
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + ((name == null) ? 0 : name.hashCode());
+        return result;
+    }
+
+    // сгенерировали и переопределили метод, чтобы соответствовать методу
+    // сompareTo(Human o)
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Human other = (Human) obj;
+        if (name == null) {
+            if (other.name != null)
+                return false;
+        } else if (!name.equals(other.name))
+            return false;
+        return true;
     }
 
 }

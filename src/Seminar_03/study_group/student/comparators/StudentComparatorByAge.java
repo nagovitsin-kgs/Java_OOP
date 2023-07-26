@@ -1,4 +1,6 @@
-package study_group;
+package Seminar_03.study_group.student.comparators;
+
+import Seminar_03.study_group.student.Student;
 
 import java.util.Comparator;
 
