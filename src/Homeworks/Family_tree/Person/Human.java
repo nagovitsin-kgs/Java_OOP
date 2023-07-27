@@ -44,6 +44,10 @@ public class Human implements Serializable, Comparable<Human> {
         this(name, gender, dateOfBirth, null);
     }
 
+    public Human(String name, LocalDate dateOfBirth) {
+        this(name, null, dateOfBirth, null);
+    }
+
     public boolean addParent(Human parent) {
         if (!parents.contains(parent)) {
             parents.add(parent);
@@ -104,6 +108,7 @@ public class Human implements Serializable, Comparable<Human> {
     }
 
     // переопределение и реализация метода интерфейса Comparable для типа Human
+
     @Override
     public int compareTo(Human o) {
         return name.compareTo(o.name);
@@ -135,6 +140,14 @@ public class Human implements Serializable, Comparable<Human> {
         } else if (!name.equals(other.name))
             return false;
         return true;
+    }
+
+    public List<Human> getParents() {
+        return parents;
+    }
+
+    public void setParents(List<Human> parents) {
+        this.parents = parents;
     }
 
 }

@@ -3,14 +3,17 @@ package Homeworks.family_tree.family_tree;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 import Homeworks.family_tree.person.Human;
+import Homeworks.family_tree.person.comparators.HumanComparatorByDateOfBirth;
+import Homeworks.family_tree.person.comparators.HumanComparatorByName;
 
-public class FamilyTree implements Serializable {
+public class FamilyTree implements Serializable, Iterable<Human> {
     private int humanId;
-    private List<Human> peopleList;
+    private List<Human> humanList;
     private Map<Human, List<Human>> relationships;
 
     // Можно только так:
@@ -22,12 +25,12 @@ public class FamilyTree implements Serializable {
     /**
      * Создание экземпляра класса, в котором:
      * 
-     * @param people        - значение параметра people присваивается полю people
+     * @param human         - значение параметра people присваивается полю people
      * @param relationships - значение параметра relationships присваивается полю
      *                      relationships
      */
-    public FamilyTree(List<Human> people, Map<Human, List<Human>> relationships) {
-        this.peopleList = people;
+    public FamilyTree(List<Human> human, Map<Human, List<Human>> relationships) {
+        this.humanList = human;
         this.relationships = relationships;
     }
 
@@ -47,13 +50,13 @@ public class FamilyTree implements Serializable {
         this.humanId = humanId;
     }
 
-    public boolean addPerson(Human person) {
-        if (person == null) {
+    public boolean addHuman(Human human) {
+        if (human == null) {
             return false;
         }
-        if (!peopleList.contains(person)) {
-            peopleList.add(person);
-            person.setId(humanId++);
+        if (!humanList.contains(human)) {
+            humanList.add(human);
+            human.setId(humanId++);
 
             return true;
         }
@@ -73,17 +76,17 @@ public class FamilyTree implements Serializable {
         return false;
     }
 
-    public List<Human> getChildren(Human person) {
+    public List<Human> getChildren(Human human) {
 
-        return relationships.getOrDefault(person, new ArrayList<>());
+        return relationships.getOrDefault(human, new ArrayList<>());
     }
 
-    public List<Human> getPeopleList() {
-        return peopleList;
+    public List<Human> getHumanList() {
+        return humanList;
     }
 
-    public void setPeopleList(List<Human> people) {
-        this.peopleList = people;
+    public void setHumanList(List<Human> human) {
+        this.humanList = human;
     }
 
     public Map<Human, List<Human>> getRelationships() {
@@ -96,6 +99,20 @@ public class FamilyTree implements Serializable {
 
     @Override
     public String toString() {
-        return "FamilyTree [\npeople=" + peopleList + ", \nrelationships=" + relationships + "\n]";
+        return "FamilyTree [\npeople=" + humanList + ", \nrelationships=" + relationships + "\n]";
     }
+
+    @Override
+    public Iterator<Human> iterator() {
+        return new HumanIterator(humanList);
+    }
+
+    public void sortByName() {
+        humanList.sort(new HumanComparatorByName());
+    }
+
+    public void sortByDateOfBirth() {
+        humanList.sort(new HumanComparatorByDateOfBirth());
+    }
+
 }

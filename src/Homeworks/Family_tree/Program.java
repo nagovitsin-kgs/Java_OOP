@@ -7,6 +7,7 @@ import Homeworks.family_tree.data_fixation.FileProcessing;
 import Homeworks.family_tree.family_tree.FamilyTree;
 import Homeworks.family_tree.person.Gender;
 import Homeworks.family_tree.person.Human;
+import Homeworks.family_tree.service.Service;;
 
 public class Program {
     public static void main(String[] args) {
@@ -22,10 +23,10 @@ public class Program {
         Human alice = new Human("Алиса", Gender.FEMALE, LocalDate.of(2001, 1, 1));
 
         // Добавление людей в генеалогическое древо
-        familyTree.addPerson(john);
-        familyTree.addPerson(jane);
-        familyTree.addPerson(bob);
-        familyTree.addPerson(alice);
+        familyTree.addHuman(john);
+        familyTree.addHuman(jane);
+        familyTree.addHuman(bob);
+        familyTree.addHuman(alice);
 
         // Создание связей между людьми в генеалогическом древе
         familyTree.addParentChildRelationships(john, bob);
@@ -58,6 +59,62 @@ public class Program {
         // Чтение файла
         familyTree = (FamilyTree) fileProcessing.readFile(filePath);
         System.out.println(familyTree + "\n");
+
+        // Создание конструктора для добавления людей в древо
+        Service service = new Service();
+
+        service.addHuman("Гоша", LocalDate.of(1984, 05, 10));
+        service.addHuman("Петя", LocalDate.of(1975, 12, 06));
+        service.addHuman("Кристина", LocalDate.of(1965, 07, 22));
+        service.addHuman("Кирилл", LocalDate.of(2001, 02, 25));
+
+        // Вывод информации по людям до сортировки:
+        System.out.println(service.getHumansInfo());
+        /**
+         * Люди:
+         * Human [id=0, name=Гоша, gender=null, dateOfBirth=1984-05-10,
+         * dateOfDeath=null]
+         * Human [id=1, name=Петя, gender=null, dateOfBirth=1975-12-06,
+         * dateOfDeath=null]
+         * Human [id=2, name=Кристина, gender=null, dateOfBirth=1965-07-22,
+         * dateOfDeath=null]
+         * Human [id=3, name=Кирилл, gender=null, dateOfBirth=2001-02-25,
+         * dateOfDeath=null]
+         */
+
+        // сортировка в древе по имени добавленных людей
+        service.sortByName();
+
+        // Вывод информации по людям после сортировки по имени:
+        System.out.println(service.getHumansInfo());
+        /**
+         * Люди:
+         * Human [id=0, name=Гоша, gender=null, dateOfBirth=1984-05-10,
+         * dateOfDeath=null]
+         * Human [id=3, name=Кирилл, gender=null, dateOfBirth=2001-02-25,
+         * dateOfDeath=null]
+         * Human [id=2, name=Кристина, gender=null, dateOfBirth=1965-07-22,
+         * dateOfDeath=null]
+         * Human [id=1, name=Петя, gender=null, dateOfBirth=1975-12-06,
+         * dateOfDeath=null]
+         */
+
+        // сортировка в древе по дате рождения добавленных людей
+        service.sortByDateOfBirth();
+
+        // Вывод информации по людям после сортировки по дате рождения:
+        System.out.println(service.getHumansInfo());
+        /**
+         * Люди:
+         * Human [id=2, name=Кристина, gender=null, dateOfBirth=1965-07-22,
+         * dateOfDeath=null]
+         * Human [id=1, name=Петя, gender=null, dateOfBirth=1975-12-06,
+         * dateOfDeath=null]
+         * Human [id=0, name=Гоша, gender=null, dateOfBirth=1984-05-10,
+         * dateOfDeath=null]
+         * Human [id=3, name=Кирилл, gender=null, dateOfBirth=2001-02-25,
+         * dateOfDeath=null]
+         */
     }
 
 }
