@@ -4,11 +4,11 @@ import java.time.LocalDate;
 import java.util.*;
 
 import Homeworks.dogs.Dog;
-import Homeworks.family_tree.data_fixation.FileProcessing;
 import Homeworks.family_tree.family_tree.FamilyTree;
 import Homeworks.family_tree.person.Gender;
 import Homeworks.family_tree.person.Human;
-import Homeworks.family_tree.service.Service;;
+import Homeworks.family_tree.service.Service;
+import Homeworks.family_tree.writer.FileProcessing;;
 
 public class Program {
     public static void main(String[] args) {

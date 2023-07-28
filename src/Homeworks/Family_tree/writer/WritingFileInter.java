@@ -1,11 +1,11 @@
-package Homeworks.family_tree.Interfaces;
+package Homeworks.family_tree.writer;
 
 import java.io.Serializable;
 
 /**
  * Интерфейс, Записывание файла
  */
-public interface WritingFile {
+public interface WritingFileInter {
 
     /**
      * Метод, записать файл

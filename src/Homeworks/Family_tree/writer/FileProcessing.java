@@ -1,4 +1,4 @@
-package Homeworks.family_tree.data_fixation;
+package Homeworks.family_tree.writer;
 
 // import java.io.*; // либо
 import java.io.FileInputStream;
@@ -7,14 +7,11 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
-import Homeworks.family_tree.Interfaces.ReadingFile;
-import Homeworks.family_tree.Interfaces.WritingFile;
-
 /**
  * Класс обработка файлов
  */
 
-public class FileProcessing implements WritingFile, ReadingFile {
+public class FileProcessing implements WritingFileInter, ReadingFileInter {
     // Используем интерфейс Serializable, и другие классы для создания методов
     // чтения, сохранения и записи, которые импортируеим из java.io.*
 

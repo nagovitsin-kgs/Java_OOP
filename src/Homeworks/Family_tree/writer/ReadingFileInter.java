@@ -1,10 +1,10 @@
-package Homeworks.family_tree.Interfaces;
+package Homeworks.family_tree.writer;
 
 /**
  * Интерфейс: Чтение файла
  */
 
-public interface ReadingFile {
+public interface ReadingFileInter {
 
     /**
      * Метод, читать файл
