@@ -7,14 +7,14 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import Homeworks.family_tree.person.Human;
+//import Homeworks.family_tree.person.Human;
 import Homeworks.family_tree.person.comparators.HumanComparatorByDateOfBirth;
 import Homeworks.family_tree.person.comparators.HumanComparatorByName;
 
-public class FamilyTree implements Serializable, Iterable<Human> {
+public class FamilyTree<E extends FamilyTreeItemInter> implements Serializable, Iterable<E> {
     private int humanId;
-    private List<Human> humanList;
-    private Map<Human, List<Human>> relationships;
+    private List<E> humanList;
+    private Map<E, List<E>> relationships;
 
     // Можно только так:
     // public FamilyTree() {
@@ -29,7 +29,7 @@ public class FamilyTree implements Serializable, Iterable<Human> {
      * @param relationships - значение параметра relationships присваивается полю
      *                      relationships
      */
-    public FamilyTree(List<Human> human, Map<Human, List<Human>> relationships) {
+    public FamilyTree(List<E> human, Map<E, List<E>> relationships) {
         this.humanList = human;
         this.relationships = relationships;
     }
@@ -50,7 +50,7 @@ public class FamilyTree implements Serializable, Iterable<Human> {
         this.humanId = humanId;
     }
 
-    public boolean addHuman(Human human) {
+    public boolean addHuman(E human) {
         if (human == null) {
             return false;
         }
@@ -63,7 +63,7 @@ public class FamilyTree implements Serializable, Iterable<Human> {
         return false;
     }
 
-    public boolean addParentChildRelationships(Human parent, Human child) {
+    public boolean addParentChildRelationships(E parent, E child) {
         if (parent == null) {
 
             return false;
@@ -76,24 +76,24 @@ public class FamilyTree implements Serializable, Iterable<Human> {
         return false;
     }
 
-    public List<Human> getChildren(Human human) {
+    public List<E> getChildren(E human) {
 
         return relationships.getOrDefault(human, new ArrayList<>());
     }
 
-    public List<Human> getHumanList() {
+    public List<E> getHumanList() {
         return humanList;
     }
 
-    public void setHumanList(List<Human> human) {
+    public void setHumanList(List<E> human) {
         this.humanList = human;
     }
 
-    public Map<Human, List<Human>> getRelationships() {
+    public Map<E, List<E>> getRelationships() {
         return relationships;
     }
 
-    public void setRelationships(Map<Human, List<Human>> relationships) {
+    public void setRelationships(Map<E, List<E>> relationships) {
         this.relationships = relationships;
     }
 
@@ -103,16 +103,16 @@ public class FamilyTree implements Serializable, Iterable<Human> {
     }
 
     @Override
-    public Iterator<Human> iterator() {
-        return new HumanIterator(humanList);
+    public Iterator<E> iterator() {
+        return new HumanIterator<>(humanList);
     }
 
     public void sortByName() {
-        humanList.sort(new HumanComparatorByName());
+        humanList.sort(new HumanComparatorByName<>());
     }
 
     public void sortByDateOfBirth() {
-        humanList.sort(new HumanComparatorByDateOfBirth());
+        humanList.sort(new HumanComparatorByDateOfBirth<>());
     }
 
 }

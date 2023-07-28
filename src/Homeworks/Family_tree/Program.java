@@ -3,6 +3,7 @@ package Homeworks.family_tree;
 import java.time.LocalDate;
 import java.util.*;
 
+import Homeworks.dogs.Dog;
 import Homeworks.family_tree.data_fixation.FileProcessing;
 import Homeworks.family_tree.family_tree.FamilyTree;
 import Homeworks.family_tree.person.Gender;
@@ -14,7 +15,7 @@ public class Program {
         System.out.println("\nЗадание к уроку 1:________________________________\n");
 
         // Создание генеалогического древа
-        FamilyTree familyTree = new FamilyTree();
+        FamilyTree<Human> familyTree = new FamilyTree<>();
 
         // Создание людей для добавления в генеалогическое древо
         Human john = new Human("Джон", Gender.MALE, LocalDate.of(1974, 7, 10));
@@ -57,7 +58,7 @@ public class Program {
         // FileProcessing fileProcessing = new FileProcessing();
 
         // Чтение файла
-        familyTree = (FamilyTree) fileProcessing.readFile(filePath);
+        familyTree = (FamilyTree<Human>) fileProcessing.readFile(filePath);
         System.out.println(familyTree + "\n");
 
         // Создание конструктора для добавления людей в древо
@@ -115,6 +116,12 @@ public class Program {
          * Human [id=3, name=Кирилл, gender=null, dateOfBirth=2001-02-25,
          * dateOfDeath=null]
          */
+
+        FamilyTree<Dog> tree = new FamilyTree<>();
+        tree.addHuman(new Dog("Доллар", Gender.MALE));
+        tree.addHuman(new Dog("Найда", Gender.FEMALE));
+        System.out.println(tree);
+
     }
 
 }

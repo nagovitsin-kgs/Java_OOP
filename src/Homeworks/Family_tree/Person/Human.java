@@ -2,7 +2,10 @@ package Homeworks.family_tree.person;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
+
+import Homeworks.family_tree.family_tree.FamilyTreeItemInter;
 
 /**
  * Экземпляр класса: public Human(String name, Gender gender, LocalDate
@@ -12,7 +15,7 @@ import java.util.List;
  * Класс: public class Human implements Serializable, Comparable<Human>
  */
 
-public class Human implements Serializable, Comparable<Human> {
+public class Human implements Serializable, Comparable<Human>, FamilyTreeItemInter {
     // Создание полей в классе
     private int id;
     private String name;
@@ -38,6 +41,7 @@ public class Human implements Serializable, Comparable<Human> {
         this.gender = gender;
         this.dateOfBirth = dateOfBirth;
         this.dateOfDeath = dateOfDeath;
+
     }
 
     public Human(String name, Gender gender, LocalDate dateOfBirth) {
@@ -60,6 +64,7 @@ public class Human implements Serializable, Comparable<Human> {
         return parents;
     }
 
+    @Override // добавили анотацию, т.к impl FamilyTreeItem_inter
     public String getName() {
         return name;
     }
@@ -72,6 +77,7 @@ public class Human implements Serializable, Comparable<Human> {
         return id;
     }
 
+    @Override // добавили анотацию, т.к impl FamilyTreeItem_inter
     public void setId(int id) {
         this.id = id;
     }
@@ -84,6 +90,7 @@ public class Human implements Serializable, Comparable<Human> {
         this.gender = gender;
     }
 
+    @Override // добавили анотацию, т.к impl FamilyTreeItem_inter
     public LocalDate getDateOfBirth() {
         return dateOfBirth;
     }

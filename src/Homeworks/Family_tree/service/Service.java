@@ -6,10 +6,10 @@ import Homeworks.family_tree.family_tree.FamilyTree;
 
 public class Service {
 
-    FamilyTree familyTree;
+    FamilyTree<Human> familyTree;
 
     public Service() {
-        familyTree = new FamilyTree();
+        familyTree = new FamilyTree<>();
     }
 
     public void addHuman(String name, LocalDate dateOfBirth) {
