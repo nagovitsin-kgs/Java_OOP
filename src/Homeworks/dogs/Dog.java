@@ -4,8 +4,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import Homeworks.family_tree.family_tree.FamilyTreeItemInter;
-import Homeworks.family_tree.person.Gender;
+import Homeworks.family_tree.model.family_tree.FamilyTreeItemInter;
+import Homeworks.family_tree.model.person.Gender;
 
 public class Dog implements FamilyTreeItemInter {
     protected int id;

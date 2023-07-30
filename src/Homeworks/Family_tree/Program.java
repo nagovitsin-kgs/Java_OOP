@@ -4,11 +4,13 @@ import java.time.LocalDate;
 import java.util.*;
 
 import Homeworks.dogs.Dog;
-import Homeworks.family_tree.family_tree.FamilyTree;
-import Homeworks.family_tree.person.Gender;
-import Homeworks.family_tree.person.Human;
-import Homeworks.family_tree.service.Service;
-import Homeworks.family_tree.writer.FileProcessing;;
+import Homeworks.family_tree.model.family_tree.FamilyTree;
+import Homeworks.family_tree.model.person.Gender;
+import Homeworks.family_tree.model.person.Human;
+import Homeworks.family_tree.model.service.Service;
+import Homeworks.family_tree.model.writer.FileProcessing;
+import Homeworks.family_tree.view.ConsoleUI;
+import Homeworks.family_tree.view.View;
 
 public class Program {
     public static void main(String[] args) {
@@ -117,10 +119,15 @@ public class Program {
          * dateOfDeath=null]
          */
 
+        // добавление в древо собак)
         FamilyTree<Dog> tree = new FamilyTree<>();
         tree.addHuman(new Dog("Доллар", Gender.MALE));
         tree.addHuman(new Dog("Найда", Gender.FEMALE));
         System.out.println(tree);
+
+        // создание
+        View view = new ConsoleUI();
+        view.start();
 
     }
 

@@ -1,8 +1,9 @@
-package Homeworks.family_tree.service;
+package Homeworks.family_tree.model.service;
 
-import Homeworks.family_tree.person.Human;
+import Homeworks.family_tree.model.family_tree.FamilyTree;
+import Homeworks.family_tree.model.person.Human;
+
 import java.time.LocalDate;
-import Homeworks.family_tree.family_tree.FamilyTree;
 
 public class Service {
 
@@ -39,5 +40,10 @@ public class Service {
 
     public void sortByDateOfBirth() {
         familyTree.sortByDateOfBirth();
+    }
+
+    @Override
+    public String toString() {
+        return "Service [familyTree=" + familyTree + "]";
     }
 }

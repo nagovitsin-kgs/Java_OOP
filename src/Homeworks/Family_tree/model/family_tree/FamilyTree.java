@@ -1,4 +1,4 @@
-package Homeworks.family_tree.family_tree;
+package Homeworks.family_tree.model.family_tree;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -7,9 +7,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-//import Homeworks.family_tree.person.Human;
-import Homeworks.family_tree.person.comparators.HumanComparatorByDateOfBirth;
-import Homeworks.family_tree.person.comparators.HumanComparatorByName;
+import Homeworks.family_tree.model.person.Human;
+import Homeworks.family_tree.model.person.comparators.HumanComparatorByDateOfBirth;
+import Homeworks.family_tree.model.person.comparators.HumanComparatorByName;
 
 public class FamilyTree<E extends FamilyTreeItemInter> implements Serializable, Iterable<E> {
     private int humanId;
@@ -29,6 +29,7 @@ public class FamilyTree<E extends FamilyTreeItemInter> implements Serializable, 
      * @param relationships - значение параметра relationships присваивается полю
      *                      relationships
      */
+
     public FamilyTree(List<E> human, Map<E, List<E>> relationships) {
         this.humanList = human;
         this.relationships = relationships;

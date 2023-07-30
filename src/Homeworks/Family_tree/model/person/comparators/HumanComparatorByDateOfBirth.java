@@ -1,10 +1,9 @@
-package Homeworks.family_tree.person.comparators;
+package Homeworks.family_tree.model.person.comparators;
 
 // import java.time.LocalDate;
 import java.util.Comparator;
 
-import Homeworks.family_tree.family_tree.FamilyTreeItemInter;
-// import Homeworks.family_tree.person.Human;
+import Homeworks.family_tree.model.family_tree.FamilyTreeItemInter;
 
 public class HumanComparatorByDateOfBirth<T extends FamilyTreeItemInter> implements Comparator<T> {
 

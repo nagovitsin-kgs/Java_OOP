@@ -1,11 +1,11 @@
-package Homeworks.family_tree.person;
+package Homeworks.family_tree.model.person;
 
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import Homeworks.family_tree.family_tree.FamilyTreeItemInter;
+import Homeworks.family_tree.model.family_tree.FamilyTreeItemInter;
 
 /**
  * Экземпляр класса: public Human(String name, Gender gender, LocalDate

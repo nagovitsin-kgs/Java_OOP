@@ -1,4 +1,4 @@
-package Homeworks.family_tree.family_tree;
+package Homeworks.family_tree.model.family_tree;
 
 import java.time.LocalDate;
 

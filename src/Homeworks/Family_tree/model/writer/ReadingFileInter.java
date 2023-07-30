@@ -1,4 +1,4 @@
-package Homeworks.family_tree.writer;
+package Homeworks.family_tree.model.writer;
 
 /**
  * Интерфейс: Чтение файла

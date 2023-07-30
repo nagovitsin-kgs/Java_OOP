@@ -1,4 +1,4 @@
-package Homeworks.family_tree.writer;
+package Homeworks.family_tree.model.writer;
 
 // import java.io.*; // либо
 import java.io.FileInputStream;
