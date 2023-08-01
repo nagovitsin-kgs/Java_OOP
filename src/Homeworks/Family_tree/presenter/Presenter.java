@@ -2,6 +2,7 @@ package Homeworks.family_tree.presenter;
 
 import java.time.LocalDate;
 
+import Homeworks.family_tree.model.person.Gender;
 import Homeworks.family_tree.model.service.Service;
 import Homeworks.family_tree.view.View;
 
@@ -22,8 +23,8 @@ public class Presenter {
         service = new Service();
     }
 
-    public void addHuman(String name, LocalDate dateOfBirth) {
-        service.addHuman(name, dateOfBirth);
+    public void addHuman(String name, Gender gender, LocalDate dateOfBirth) {
+        service.addHuman(name, gender, dateOfBirth);
         // вывод информации
         getHumansInfo();
     }

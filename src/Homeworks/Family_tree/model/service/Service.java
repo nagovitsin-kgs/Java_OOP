@@ -1,6 +1,7 @@
 package Homeworks.family_tree.model.service;
 
 import Homeworks.family_tree.model.family_tree.FamilyTree;
+import Homeworks.family_tree.model.person.Gender;
 import Homeworks.family_tree.model.person.Human;
 
 import java.time.LocalDate;
@@ -13,8 +14,8 @@ public class Service {
         familyTree = new FamilyTree<>();
     }
 
-    public void addHuman(String name, LocalDate dateOfBirth) {
-        Human human = new Human(name, dateOfBirth);
+    public void addHuman(String name, Gender gender, LocalDate dateOfBirth) {
+        Human human = new Human(name, gender, dateOfBirth);
         familyTree.addHuman(human);
     }
 

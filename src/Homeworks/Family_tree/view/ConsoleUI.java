@@ -62,7 +62,7 @@ public class ConsoleUI implements View {
         // 16:06
         // String inputDate = "21_05_2023";
         LocalDate dateOfBirth = LocalDate.parse(dateOfBirthString);
-        presenter.addHuman(name, dateOfBirth);
+        presenter.addHuman(name, null, dateOfBirth);
     }
 
     private void hello() {

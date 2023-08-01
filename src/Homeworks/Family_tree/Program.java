@@ -47,7 +47,7 @@ public class Program {
         System.out.println("\nЗадание к уроку 2:________________________________\n");
 
         // Создание пути или обращение к уже созанному файлу
-        String filePath = "src/Homeworks/family_tree/files/familyTree.out";
+        String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
 
         // Создали конструкто класса, который implements интерфейсы WritingFile,
         // ReadingFile
@@ -66,10 +66,10 @@ public class Program {
         // Создание конструктора для добавления людей в древо
         Service service = new Service();
 
-        service.addHuman("Гоша", LocalDate.of(1984, 05, 10));
-        service.addHuman("Петя", LocalDate.of(1975, 12, 06));
-        service.addHuman("Кристина", LocalDate.of(1965, 07, 22));
-        service.addHuman("Кирилл", LocalDate.of(2001, 02, 25));
+        service.addHuman("Гоша", Gender.MALE, LocalDate.of(1984, 05, 10));
+        service.addHuman("Петя", Gender.MALE, LocalDate.of(1975, 12, 06));
+        service.addHuman("Кристина", Gender.FEMALE, LocalDate.of(1965, 07, 22));
+        service.addHuman("Кирилл", Gender.MALE, LocalDate.of(2001, 02, 25));
 
         // Вывод информации по людям до сортировки:
         System.out.println(service.getHumansInfo());
