@@ -34,13 +34,18 @@ public class Presenter {
         view.printAnswer(info);
     }
 
-    public void sortByDateOfBirth() {
-        service.sortByDateOfBirth();
+    public void sortByAge() {
+        service.sortByAge();
         getHumansInfo();
     }
 
     public void sortByName() {
         service.sortByName();
+        getHumansInfo();
+    }
+
+    public void sortByDateOfBirth() {
+        service.sortByDateOfBirth();
         getHumansInfo();
     }
 

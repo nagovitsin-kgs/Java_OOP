@@ -9,7 +9,9 @@ public class SortByDateOfBirth extends Command {
         description = "Отсортировать список по дате рождения";
     }
 
+    @Override
     public void execute() {
         consoleUI.sortByDateOfBirth();
     }
+
 }

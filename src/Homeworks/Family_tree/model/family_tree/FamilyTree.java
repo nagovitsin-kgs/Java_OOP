@@ -7,7 +7,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import Homeworks.family_tree.model.person.Human;
+// import Homeworks.family_tree.model.person.Human;
+import Homeworks.family_tree.model.person.comparators.HumanComparatorByAge;
 import Homeworks.family_tree.model.person.comparators.HumanComparatorByDateOfBirth;
 import Homeworks.family_tree.model.person.comparators.HumanComparatorByName;
 
@@ -100,7 +101,8 @@ public class FamilyTree<E extends FamilyTreeItemInter> implements Serializable, 
 
     @Override
     public String toString() {
-        return "FamilyTree [\npeople=" + humanList + ", \nrelationships=" + relationships + "\n]";
+        return "FamilyTree [\npeople=" + humanList + ", \nrelationships=" +
+                relationships + "\n]";
     }
 
     @Override
@@ -110,6 +112,10 @@ public class FamilyTree<E extends FamilyTreeItemInter> implements Serializable, 
 
     public void sortByName() {
         humanList.sort(new HumanComparatorByName<>());
+    }
+
+    public void sortByAge() {
+        humanList.sort(new HumanComparatorByAge<>());
     }
 
     public void sortByDateOfBirth() {

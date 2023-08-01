@@ -7,6 +7,7 @@ import Homeworks.family_tree.view.commands.AddHuman;
 import Homeworks.family_tree.view.commands.Command;
 import Homeworks.family_tree.view.commands.Finish;
 import Homeworks.family_tree.view.commands.GetHumansInfo;
+import Homeworks.family_tree.view.commands.SortByAge;
 import Homeworks.family_tree.view.commands.SortByDateOfBirth;
 import Homeworks.family_tree.view.commands.SortByName;
 
@@ -20,6 +21,7 @@ public class ProgramMenu {
         commandList.add(new GetHumansInfo(consoleUI));
         commandList.add(new SortByName(consoleUI));
         commandList.add(new SortByDateOfBirth(consoleUI));
+        commandList.add(new SortByAge(consoleUI));
         commandList.add(new Finish(consoleUI));
     }
 

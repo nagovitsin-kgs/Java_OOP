@@ -222,10 +222,12 @@ public class Human implements Serializable, Comparable<Human>, FamilyTreeItemInt
 
     public String getInfo() {
         StringBuilder sb = new StringBuilder();
-        sb.append("id: ");
+        sb.append("\nid: ");
         sb.append(id);
         sb.append(", имя: ");
         sb.append(name);
+        sb.append(", дата рождения: ");
+        sb.append(getDateOfBirth());
         sb.append(", пол: ");
         sb.append(getGender());
         sb.append(", возраст: ");

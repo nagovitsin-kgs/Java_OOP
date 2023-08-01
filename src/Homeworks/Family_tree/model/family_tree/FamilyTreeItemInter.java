@@ -6,6 +6,8 @@ public interface FamilyTreeItemInter {
 
     String getName();
 
+    int getAge();
+
     LocalDate getDateOfBirth();
 
     void setId(int id);

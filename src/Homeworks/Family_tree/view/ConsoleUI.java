@@ -2,6 +2,7 @@ package Homeworks.family_tree.view;
 
 import java.time.LocalDate;
 import java.util.Scanner;
+
 import Homeworks.family_tree.presenter.Presenter;
 
 public class ConsoleUI implements View {
@@ -38,12 +39,16 @@ public class ConsoleUI implements View {
         work = false;
     }
 
-    public void sortByDateOfBirth() {
-        presenter.sortByDateOfBirth();
+    public void sortByAge() {
+        presenter.sortByAge();
     }
 
     public void sortByName() {
         presenter.sortByName();
+    }
+
+    public void sortByDateOfBirth() {
+        presenter.sortByDateOfBirth();
     }
 
     public void getHumansInfo() {
@@ -62,6 +67,7 @@ public class ConsoleUI implements View {
         // 16:06
         // String inputDate = "21_05_2023";
         LocalDate dateOfBirth = LocalDate.parse(dateOfBirthString);
+
         presenter.addHuman(name, null, dateOfBirth);
     }
 

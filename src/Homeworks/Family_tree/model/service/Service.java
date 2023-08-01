@@ -21,7 +21,7 @@ public class Service {
 
     public String getHumansInfo() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Люди:\n");
+        stringBuilder.append("Люди:");
         // Iterator<Human> iterator = familyTree.iterator();
         // while (iterator.hasNext()){
         // Human human = iterator.next();
@@ -30,13 +30,17 @@ public class Service {
         // }
         for (Human human : familyTree) {
             stringBuilder.append(human);
-            stringBuilder.append("\n");
+            // stringBuilder.append("\n");
         }
         return stringBuilder.toString();
     }
 
     public void sortByName() {
         familyTree.sortByName();
+    }
+
+    public void sortByAge() {
+        familyTree.sortByAge();
     }
 
     public void sortByDateOfBirth() {

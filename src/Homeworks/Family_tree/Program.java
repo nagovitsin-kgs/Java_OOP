@@ -73,51 +73,18 @@ public class Program {
 
         // Вывод информации по людям до сортировки:
         System.out.println(service.getHumansInfo());
-        /**
-         * Люди:
-         * Human [id=0, name=Гоша, gender=null, dateOfBirth=1984-05-10,
-         * dateOfDeath=null]
-         * Human [id=1, name=Петя, gender=null, dateOfBirth=1975-12-06,
-         * dateOfDeath=null]
-         * Human [id=2, name=Кристина, gender=null, dateOfBirth=1965-07-22,
-         * dateOfDeath=null]
-         * Human [id=3, name=Кирилл, gender=null, dateOfBirth=2001-02-25,
-         * dateOfDeath=null]
-         */
 
         // сортировка в древе по имени добавленных людей
         service.sortByName();
 
         // Вывод информации по людям после сортировки по имени:
         System.out.println(service.getHumansInfo());
-        /**
-         * Люди:
-         * Human [id=0, name=Гоша, gender=null, dateOfBirth=1984-05-10,
-         * dateOfDeath=null]
-         * Human [id=3, name=Кирилл, gender=null, dateOfBirth=2001-02-25,
-         * dateOfDeath=null]
-         * Human [id=2, name=Кристина, gender=null, dateOfBirth=1965-07-22,
-         * dateOfDeath=null]
-         * Human [id=1, name=Петя, gender=null, dateOfBirth=1975-12-06,
-         * dateOfDeath=null]
-         */
 
         // сортировка в древе по дате рождения добавленных людей
-        service.sortByDateOfBirth();
+        service.sortByAge();
 
         // Вывод информации по людям после сортировки по дате рождения:
         System.out.println(service.getHumansInfo());
-        /**
-         * Люди:
-         * Human [id=2, name=Кристина, gender=null, dateOfBirth=1965-07-22,
-         * dateOfDeath=null]
-         * Human [id=1, name=Петя, gender=null, dateOfBirth=1975-12-06,
-         * dateOfDeath=null]
-         * Human [id=0, name=Гоша, gender=null, dateOfBirth=1984-05-10,
-         * dateOfDeath=null]
-         * Human [id=3, name=Кирилл, gender=null, dateOfBirth=2001-02-25,
-         * dateOfDeath=null]
-         */
 
         // добавление в древо собак)
         FamilyTree<Dog> tree = new FamilyTree<>();
