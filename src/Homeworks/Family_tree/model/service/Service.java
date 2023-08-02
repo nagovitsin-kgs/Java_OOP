@@ -22,16 +22,17 @@ public class Service {
     public String getHumansInfo() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Люди:");
+        for (Human human : familyTree) {
+            stringBuilder.append(human);
+            // stringBuilder.append("\n");
+        }
+        // Либо так:
         // Iterator<Human> iterator = familyTree.iterator();
         // while (iterator.hasNext()){
         // Human human = iterator.next();
         // stringBuilder.append(human);
         // stringBuilder.append("\n");
         // }
-        for (Human human : familyTree) {
-            stringBuilder.append(human);
-            // stringBuilder.append("\n");
-        }
         return stringBuilder.toString();
     }
 
@@ -49,6 +50,11 @@ public class Service {
 
     @Override
     public String toString() {
-        return "Service [familyTree=" + familyTree + "]";
+        return getHumansInfo();
     }
+
+    // @Override
+    // public String toString() {
+    // return "Service [familyTree=" + familyTree + "]";
+    // }
 }

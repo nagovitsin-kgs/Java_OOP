@@ -11,7 +11,7 @@ import java.io.Serializable;
  * Класс обработка файлов
  */
 
-public class FileProcessing implements WritingFileInter, ReadingFileInter {
+public class FileHandler implements WritingFileInter, ReadingFileInter {
     // Используем интерфейс Serializable, и другие классы для создания методов
     // чтения, сохранения и записи, которые импортируеим из java.io.*
 

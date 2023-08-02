@@ -17,16 +17,18 @@ public class FamilyTree<E extends FamilyTreeItemInter> implements Serializable, 
     private List<E> humanList;
     private Map<E, List<E>> relationships;
 
-    // Можно только так:
-    // public FamilyTree() {
-    // this.people = new ArrayList<>();
-    // this.relationships = new HashMap<>();
-    // }
-    // А лучше, наверно, так:
+    /**
+     * Можно только так:
+     * public FamilyTree() {
+     * this.humanList = new ArrayList<>();
+     * this.relationships = new HashMap<>();
+     * }
+     * А лучше, наверно, так:
+     */
     /**
      * Создание экземпляра класса, в котором:
      * 
-     * @param human         - значение параметра people присваивается полю people
+     * @param human         - значение параметра human присваивается полю humanList
      * @param relationships - значение параметра relationships присваивается полю
      *                      relationships
      */
@@ -52,37 +54,6 @@ public class FamilyTree<E extends FamilyTreeItemInter> implements Serializable, 
         this.humanId = humanId;
     }
 
-    public boolean addHuman(E human) {
-        if (human == null) {
-            return false;
-        }
-        if (!humanList.contains(human)) {
-            humanList.add(human);
-            human.setId(humanId++);
-
-            return true;
-        }
-        return false;
-    }
-
-    public boolean addParentChildRelationships(E parent, E child) {
-        if (parent == null) {
-
-            return false;
-        }
-        if (!relationships.containsKey(parent)) {
-            relationships.put(parent, new ArrayList<>());
-            relationships.get(parent).add(child);
-            return true;
-        }
-        return false;
-    }
-
-    public List<E> getChildren(E human) {
-
-        return relationships.getOrDefault(human, new ArrayList<>());
-    }
-
     public List<E> getHumanList() {
         return humanList;
     }
@@ -99,15 +70,38 @@ public class FamilyTree<E extends FamilyTreeItemInter> implements Serializable, 
         this.relationships = relationships;
     }
 
-    @Override
-    public String toString() {
-        return "FamilyTree [\npeople=" + humanList + ", \nrelationships=" +
-                relationships + "\n]";
+    public boolean addHuman(E human) {
+        if (human == null) {
+            return false;
+        }
+        if (!humanList.contains(human)) {
+            humanList.add(human);
+            human.setId(humanId++);
+
+            return true;
+        }
+        return false;
     }
 
-    @Override
-    public Iterator<E> iterator() {
-        return new HumanIterator<>(humanList);
+    public boolean addParentChildRelationships(E parent, E child) {
+        if (parent == null) {
+            return false;
+        }
+        if (!relationships.containsKey(parent)) {
+            relationships.put(parent, new ArrayList<>());
+            relationships.get(parent).add(child);
+            return true;
+        }
+        return false;
+    }
+
+    public List<E> getChildrenByName(E human) {
+        List<E> children = relationships.getOrDefault(human, new ArrayList<>());
+        System.out.println("Дети у родителя " + human.getName() + ":");
+        for (E child : children) {
+            System.out.println(child.getName() + "\n");
+        }
+        return children;
     }
 
     public void sortByName() {
@@ -120,6 +114,34 @@ public class FamilyTree<E extends FamilyTreeItemInter> implements Serializable, 
 
     public void sortByDateOfBirth() {
         humanList.sort(new HumanComparatorByDateOfBirth<>());
+    }
+
+    @Override
+    public Iterator<E> iterator() {
+        return new HumanIterator<>(humanList);
+    }
+
+    // @Override
+    // public String toString() {
+    // return "FamilyTree [\nhumanList=" + humanList + ", \nrelationships=" +
+    // relationships + "\n]";
+    // }
+    //
+    public String getInfo() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("В дереве ");
+        sb.append(humanList.size());
+        sb.append(" объектов: \n");
+        for (E human : humanList) {
+            sb.append(human);
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
+
+    @Override
+    public String toString() {
+        return getInfo();
     }
 
 }

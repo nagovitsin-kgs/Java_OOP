@@ -1,6 +1,5 @@
 package Homeworks.family_tree.model.person.comparators;
 
-// import java.time.LocalDate;
 import java.util.Comparator;
 
 import Homeworks.family_tree.model.family_tree.FamilyTreeItemInter;

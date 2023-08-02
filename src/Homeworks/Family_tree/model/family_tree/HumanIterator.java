@@ -22,4 +22,5 @@ public class HumanIterator<T> implements Iterator<T> {
     public T next() {
         return humanList.get(index++);
     }
+
 }

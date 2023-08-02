@@ -8,7 +8,7 @@ import Homeworks.family_tree.model.family_tree.FamilyTree;
 import Homeworks.family_tree.model.person.Gender;
 import Homeworks.family_tree.model.person.Human;
 import Homeworks.family_tree.model.service.Service;
-import Homeworks.family_tree.model.writer.FileProcessing;
+import Homeworks.family_tree.model.writer.FileHandler;
 import Homeworks.family_tree.view.ConsoleUI;
 import Homeworks.family_tree.view.View;
 
@@ -37,12 +37,14 @@ public class Program {
         familyTree.addParentChildRelationships(bob, alice);
 
         // Получение всех детей выбранного человека
-        List<Human> children = familyTree.getChildren(bob);
-        System.out.println("Дети " + bob.getName() + "а" + ":"); // Дети Боба:
-        for (Human child : children) {
-            System.out.println(child.getName() + "\n"); // Алиса
-        }
-        System.out.println(familyTree); // сделал переопределения метода toString в классах
+        familyTree.getChildrenByName(bob);
+        // List<Human> children = familyTree.getChildren(bob);
+        // System.out.println("Дети " + bob.getName() + "а" + ":"); // Дети Боба:
+        // for (Human child : children) {
+        // System.out.println(child.getName() + "\n"); // Алиса
+        // }
+        // System.out.println(familyTree); // сделал переопределения метода toString в
+        // классах
 
         System.out.println("\nЗадание к уроку 2:________________________________\n");
 
@@ -51,17 +53,19 @@ public class Program {
 
         // Создали конструкто класса, который implements интерфейсы WritingFile,
         // ReadingFile
-        FileProcessing fileProcessing = new FileProcessing();
+        FileHandler fileHandler = new FileHandler();
 
         // Сохранение и создания файла с помощью методов интерфейсов и серилизации
-        fileProcessing.createSaveWriteFile(familyTree, filePath); // запись и сохранение файла, создание
+        fileHandler.createSaveWriteFile(familyTree, filePath); // запись и сохранение файла, создание
         System.out.println(familyTree + "\n");
 
         // FileProcessing fileProcessing = new FileProcessing();
 
         // Чтение файла
-        familyTree = (FamilyTree<Human>) fileProcessing.readFile(filePath);
+        familyTree = (FamilyTree<Human>) fileHandler.readFile(filePath);
         System.out.println(familyTree + "\n");
+
+        System.out.println("\nЗадание к уроку 3:________________________________\n");
 
         // Создание конструктора для добавления людей в древо
         Service service = new Service();
@@ -86,16 +90,21 @@ public class Program {
         // Вывод информации по людям после сортировки по дате рождения:
         System.out.println(service.getHumansInfo());
 
+        System.out.println("\nЗадание к уроку 4:________________________________\n");
+
         // добавление в древо собак)
         FamilyTree<Dog> tree = new FamilyTree<>();
         tree.addHuman(new Dog("Доллар", Gender.MALE));
         tree.addHuman(new Dog("Найда", Gender.FEMALE));
         System.out.println(tree);
 
+        System.out.println("\nЗадание к уроку 5:________________________________\n");
+
         // создание
         View view = new ConsoleUI();
         view.start();
 
+        System.out.println("\nЗадание к уроку 6:________________________________\n");
     }
 
 }
