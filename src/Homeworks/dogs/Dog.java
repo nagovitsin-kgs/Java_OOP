@@ -56,4 +56,10 @@ public class Dog implements FamilyTreeItemInter {
 
     }
 
+    @Override
+    public int getAge() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getAge'");
+    }
+
 }

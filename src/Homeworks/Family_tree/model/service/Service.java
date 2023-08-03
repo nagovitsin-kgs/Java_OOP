@@ -48,13 +48,9 @@ public class Service {
         familyTree.sortByDateOfBirth();
     }
 
-    @Override
-    public String toString() {
-        return getHumansInfo();
-    }
-
     // @Override
     // public String toString() {
-    // return "Service [familyTree=" + familyTree + "]";
+    // return getHumansInfo();
     // }
+
 }

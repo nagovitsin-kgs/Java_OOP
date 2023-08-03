@@ -99,7 +99,8 @@ public class FamilyTree<E extends FamilyTreeItemInter> implements Serializable, 
         List<E> children = relationships.getOrDefault(human, new ArrayList<>());
         System.out.println("Дети у родителя " + human.getName() + ":");
         for (E child : children) {
-            System.out.println(child.getName() + "\n");
+            System.out.println(child.getName());
+
         }
         return children;
     }
@@ -121,27 +122,10 @@ public class FamilyTree<E extends FamilyTreeItemInter> implements Serializable, 
         return new HumanIterator<>(humanList);
     }
 
-    // @Override
-    // public String toString() {
-    // return "FamilyTree [\nhumanList=" + humanList + ", \nrelationships=" +
-    // relationships + "\n]";
-    // }
-    //
-    public String getInfo() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("В дереве ");
-        sb.append(humanList.size());
-        sb.append(" объектов: \n");
-        for (E human : humanList) {
-            sb.append(human);
-            sb.append("\n");
-        }
-        return sb.toString();
-    }
-
     @Override
     public String toString() {
-        return getInfo();
+        return "FamilyTree [humanId=" + humanId + ", humanList=" + humanList + ", \nrelationships=" + relationships
+                + "]";
     }
 
 }

@@ -133,7 +133,7 @@ public class Human implements Serializable, Comparable<Human>, FamilyTreeItemInt
         return null;
     }
 
-    public List<Human> getPerens() {
+    public List<Human> getParents() {
         return parents;
     }
 

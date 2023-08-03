@@ -1,7 +1,6 @@
 package Homeworks.family_tree;
 
 import java.time.LocalDate;
-import java.util.*;
 
 import Homeworks.dogs.Dog;
 import Homeworks.family_tree.model.family_tree.FamilyTree;
@@ -14,6 +13,7 @@ import Homeworks.family_tree.view.View;
 
 public class Program {
     public static void main(String[] args) {
+
         System.out.println("\nЗадание к уроку 1:________________________________\n");
 
         // Создание генеалогического древа
@@ -22,29 +22,45 @@ public class Program {
         // Создание людей для добавления в генеалогическое древо
         Human john = new Human("Джон", Gender.MALE, LocalDate.of(1974, 7, 10));
         Human jane = new Human("Джейн", Gender.FEMALE, LocalDate.of(1979, 6, 12));
-        Human bob = new Human("Боб", Gender.MALE, LocalDate.of(1989, 3, 5));
-        Human alice = new Human("Алиса", Gender.FEMALE, LocalDate.of(2001, 1, 1));
+        Human bob = new Human("Боб", Gender.MALE, LocalDate.of(1989, 3, 5), john, jane);
+        Human bobi = new Human("Боби", Gender.FEMALE, LocalDate.of(1991, 5, 10));
+        Human alice = new Human("Алиса", Gender.FEMALE, LocalDate.of(2009, 1, 1), bob, bobi);
+        Human mex = new Human("Мекс", Gender.MALE, LocalDate.of(2011, 4, 6), bob, bobi);
+        Human lisa = new Human("Лиза", Gender.FEMALE, LocalDate.of(2012, 11, 23), bob, bobi);
+        Human dic = new Human("Дик", Gender.FEMALE, LocalDate.of(2014, 9, 13), bob, bobi);
 
         // Добавление людей в генеалогическое древо
         familyTree.addHuman(john);
         familyTree.addHuman(jane);
         familyTree.addHuman(bob);
+        familyTree.addHuman(bobi);
         familyTree.addHuman(alice);
+        familyTree.addHuman(mex);
+        familyTree.addHuman(lisa);
+        familyTree.addHuman(dic);
 
         // Создание связей между людьми в генеалогическом древе
         familyTree.addParentChildRelationships(john, bob);
-        familyTree.addParentChildRelationships(jane, bob);
-        familyTree.addParentChildRelationships(bob, alice);
-
+        // familyTree.addParentChildRelationships(jane, bob);
+        // familyTree.addParentChildRelationships(bob, alice);
+        // familyTree.addParentChildRelationships(bob, mex);
+        // familyTree.addParentChildRelationships(bob, lisa);
+        familyTree.addParentChildRelationships(bob, dic);
+        // familyTree.addParentChildRelationships(bobi, alice);
+        // familyTree.addParentChildRelationships(bobi, mex);
+        // familyTree.addParentChildRelationships(bobi, lisa);
+        // familyTree.addParentChildRelationships(bobi, dic);
+        System.out.println(familyTree);
         // Получение всех детей выбранного человека
         familyTree.getChildrenByName(bob);
+
         // List<Human> children = familyTree.getChildren(bob);
         // System.out.println("Дети " + bob.getName() + "а" + ":"); // Дети Боба:
         // for (Human child : children) {
         // System.out.println(child.getName() + "\n"); // Алиса
         // }
-        // System.out.println(familyTree); // сделал переопределения метода toString в
-        // классах
+        // System.out.println(familyTree); // сделал переопределения метода toString
+        // в классах
 
         System.out.println("\nЗадание к уроку 2:________________________________\n");
 
@@ -56,14 +72,15 @@ public class Program {
         FileHandler fileHandler = new FileHandler();
 
         // Сохранение и создания файла с помощью методов интерфейсов и серилизации
-        fileHandler.createSaveWriteFile(familyTree, filePath); // запись и сохранение файла, создание
-        System.out.println(familyTree + "\n");
+        fileHandler.createSaveWriteFile(familyTree, filePath); // запись и сохранение
+        // файла, создание
+        // System.out.println(familyTree + "\n");
 
         // FileProcessing fileProcessing = new FileProcessing();
 
         // Чтение файла
         familyTree = (FamilyTree<Human>) fileHandler.readFile(filePath);
-        System.out.println(familyTree + "\n");
+        // System.out.println(familyTree + "\n");
 
         System.out.println("\nЗадание к уроку 3:________________________________\n");
 
