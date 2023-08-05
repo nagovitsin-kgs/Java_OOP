@@ -7,12 +7,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-// import Homeworks.family_tree.model.person.Human;
 import Homeworks.family_tree.model.person.comparators.HumanComparatorByAge;
 import Homeworks.family_tree.model.person.comparators.HumanComparatorByDateOfBirth;
 import Homeworks.family_tree.model.person.comparators.HumanComparatorByName;
 
-public class FamilyTree<E extends FamilyTreeItemInter> implements Serializable, Iterable<E> {
+public class FamilyTree<E extends FamilyTreeItemInter<E>> implements Serializable, Iterable<E> {
     private int humanId;
     private List<E> humanList;
     private Map<E, List<E>> relationships;
@@ -24,13 +23,6 @@ public class FamilyTree<E extends FamilyTreeItemInter> implements Serializable, 
      * this.relationships = new HashMap<>();
      * }
      * А лучше, наверно, так:
-     */
-    /**
-     * Создание экземпляра класса, в котором:
-     * 
-     * @param human         - значение параметра human присваивается полю humanList
-     * @param relationships - значение параметра relationships присваивается полю
-     *                      relationships
      */
 
     public FamilyTree(List<E> human, Map<E, List<E>> relationships) {
@@ -78,9 +70,24 @@ public class FamilyTree<E extends FamilyTreeItemInter> implements Serializable, 
             humanList.add(human);
             human.setId(humanId++);
 
+            addToParents(human);
+            addToChildren(human);
+
             return true;
         }
         return false;
+    }
+
+    private void addToParents(E human) {
+        for (E parent : human.getParents()) {
+            parent.addChild(human);
+        }
+    }
+
+    private void addToChildren(E human) {
+        for (E child : human.getChildren()) {
+            child.addParent(human);
+        }
     }
 
     public boolean addParentChildRelationships(E parent, E child) {
@@ -122,10 +129,30 @@ public class FamilyTree<E extends FamilyTreeItemInter> implements Serializable, 
         return new HumanIterator<>(humanList);
     }
 
+    public String getInfo() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("В familyTree: ");
+        sb.append(humanList.size());
+        sb.append(" объектов: \n");
+        for (E human : humanList) {
+            sb.append(human);
+            // sb.append("");
+        }
+
+        return sb.toString();
+
+    }
+
     @Override
     public String toString() {
-        return "FamilyTree [humanId=" + humanId + ", humanList=" + humanList + ", \nrelationships=" + relationships
-                + "]";
+        return getInfo();
     }
+
+    // @Override
+    // public String toString() {
+    // return "FamilyTree [humanId=" + humanId + ", humanList=" + humanList +
+    // ",\nrelationships=" + relationships
+    // + "]";
+    // }
 
 }

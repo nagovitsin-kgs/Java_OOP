@@ -16,7 +16,7 @@ public class Program {
 
         System.out.println("\nЗадание к уроку 1:________________________________\n");
 
-        // Создание генеалогического древа
+        // Создание конструктора генеалогического древа
         FamilyTree<Human> familyTree = new FamilyTree<>();
 
         // Создание людей для добавления в генеалогическое древо
@@ -29,7 +29,7 @@ public class Program {
         Human lisa = new Human("Лиза", Gender.FEMALE, LocalDate.of(2012, 11, 23), bob, bobi);
         Human dic = new Human("Дик", Gender.FEMALE, LocalDate.of(2014, 9, 13), bob, bobi);
 
-        // Добавление людей в генеалогическое древо
+        // Добавление и создание связей людей в генеалогическое древо
         familyTree.addHuman(john);
         familyTree.addHuman(jane);
         familyTree.addHuman(bob);
@@ -39,52 +39,28 @@ public class Program {
         familyTree.addHuman(lisa);
         familyTree.addHuman(dic);
 
-        // Создание связей между людьми в генеалогическом древе
-        familyTree.addParentChildRelationships(john, bob);
-        // familyTree.addParentChildRelationships(jane, bob);
-        // familyTree.addParentChildRelationships(bob, alice);
-        // familyTree.addParentChildRelationships(bob, mex);
-        // familyTree.addParentChildRelationships(bob, lisa);
-        familyTree.addParentChildRelationships(bob, dic);
-        // familyTree.addParentChildRelationships(bobi, alice);
-        // familyTree.addParentChildRelationships(bobi, mex);
-        // familyTree.addParentChildRelationships(bobi, lisa);
-        // familyTree.addParentChildRelationships(bobi, dic);
         System.out.println(familyTree);
-        // Получение всех детей выбранного человека
-        familyTree.getChildrenByName(bob);
-
-        // List<Human> children = familyTree.getChildren(bob);
-        // System.out.println("Дети " + bob.getName() + "а" + ":"); // Дети Боба:
-        // for (Human child : children) {
-        // System.out.println(child.getName() + "\n"); // Алиса
-        // }
-        // System.out.println(familyTree); // сделал переопределения метода toString
-        // в классах
 
         System.out.println("\nЗадание к уроку 2:________________________________\n");
 
         // Создание пути или обращение к уже созанному файлу
         String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
 
-        // Создали конструкто класса, который implements интерфейсы WritingFile,
-        // ReadingFile
+        // Создание конструктора файловый обработчик
         FileHandler fileHandler = new FileHandler();
 
         // Сохранение и создания файла с помощью методов интерфейсов и серилизации
-        fileHandler.createSaveWriteFile(familyTree, filePath); // запись и сохранение
-        // файла, создание
+        fileHandler.createSaveWriteFile(familyTree, filePath);
         // System.out.println(familyTree + "\n");
-
-        // FileProcessing fileProcessing = new FileProcessing();
 
         // Чтение файла
+        // FileHandler fileHandler = new FileHandler();
         familyTree = (FamilyTree<Human>) fileHandler.readFile(filePath);
-        // System.out.println(familyTree + "\n");
+        System.out.println(familyTree);
 
         System.out.println("\nЗадание к уроку 3:________________________________\n");
 
-        // Создание конструктора для добавления людей в древо
+        // Создание конструктора для добавления людей в древо ч/з Service
         Service service = new Service();
 
         service.addHuman("Гоша", Gender.MALE, LocalDate.of(1984, 05, 10));
@@ -110,18 +86,21 @@ public class Program {
         System.out.println("\nЗадание к уроку 4:________________________________\n");
 
         // добавление в древо собак)
-        FamilyTree<Dog> tree = new FamilyTree<>();
-        tree.addHuman(new Dog("Доллар", Gender.MALE));
-        tree.addHuman(new Dog("Найда", Gender.FEMALE));
-        System.out.println(tree);
+        // FamilyTree<Dog> tree = new FamilyTree<>();
+        // tree.addHuman(new Dog("Доллар", Gender.MALE));
+        // tree.addHuman(new Dog("Найда", Gender.FEMALE));
+        // System.out.println(tree);
+        System.out.println("В классе Dog скопировать методы из Human - будет всё выводиться!");
 
         System.out.println("\nЗадание к уроку 5:________________________________\n");
 
-        // создание
+        // создание MVP
         View view = new ConsoleUI();
         view.start();
 
         System.out.println("\nЗадание к уроку 6:________________________________\n");
+
+        System.out.println("SOLID");
     }
 
 }

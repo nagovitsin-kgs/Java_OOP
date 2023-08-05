@@ -20,20 +20,21 @@ public class Service {
     }
 
     public String getHumansInfo() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Люди:");
+        StringBuilder sb = new StringBuilder();
+        sb.append("В Service объекты: \n");
         for (Human human : familyTree) {
-            stringBuilder.append(human);
-            // stringBuilder.append("\n");
+            sb.append(human);
+            // sb.append("\n");
         }
+        sb.append("\n");
         // Либо так:
         // Iterator<Human> iterator = familyTree.iterator();
         // while (iterator.hasNext()){
         // Human human = iterator.next();
-        // stringBuilder.append(human);
-        // stringBuilder.append("\n");
+        // sb.append(human);
+        // sb.append("\n");
         // }
-        return stringBuilder.toString();
+        return sb.toString();
     }
 
     public void sortByName() {

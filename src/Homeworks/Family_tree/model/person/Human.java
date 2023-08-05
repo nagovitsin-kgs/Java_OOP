@@ -16,7 +16,7 @@ import Homeworks.family_tree.model.family_tree.FamilyTreeItemInter;
  * Класс: public class Human implements Serializable, Comparable<Human>
  */
 
-public class Human implements Serializable, Comparable<Human>, FamilyTreeItemInter {
+public class Human implements Serializable, Comparable<Human>, FamilyTreeItemInter<Human> {
     // Создание полей в классе
     private int id;
     private String name;
@@ -252,67 +252,6 @@ public class Human implements Serializable, Comparable<Human>, FamilyTreeItemInt
     @Override
     public int compareTo(Human o) {
         return name.compareTo(o.name);
-    }
-
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + id;
-        result = prime * result + ((name == null) ? 0 : name.hashCode());
-        result = prime * result + ((gender == null) ? 0 : gender.hashCode());
-        result = prime * result + ((dateOfBirth == null) ? 0 : dateOfBirth.hashCode());
-        result = prime * result + ((dateOfDeath == null) ? 0 : dateOfDeath.hashCode());
-        result = prime * result + ((parents == null) ? 0 : parents.hashCode());
-        result = prime * result + ((children == null) ? 0 : children.hashCode());
-        result = prime * result + ((spouse == null) ? 0 : spouse.hashCode());
-        return result;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj)
-            return true;
-        if (obj == null)
-            return false;
-        if (getClass() != obj.getClass())
-            return false;
-        Human other = (Human) obj;
-        if (id != other.id)
-            return false;
-        if (name == null) {
-            if (other.name != null)
-                return false;
-        } else if (!name.equals(other.name))
-            return false;
-        if (gender != other.gender)
-            return false;
-        if (dateOfBirth == null) {
-            if (other.dateOfBirth != null)
-                return false;
-        } else if (!dateOfBirth.equals(other.dateOfBirth))
-            return false;
-        if (dateOfDeath == null) {
-            if (other.dateOfDeath != null)
-                return false;
-        } else if (!dateOfDeath.equals(other.dateOfDeath))
-            return false;
-        if (parents == null) {
-            if (other.parents != null)
-                return false;
-        } else if (!parents.equals(other.parents))
-            return false;
-        if (children == null) {
-            if (other.children != null)
-                return false;
-        } else if (!children.equals(other.children))
-            return false;
-        if (spouse == null) {
-            if (other.spouse != null)
-                return false;
-        } else if (!spouse.equals(other.spouse))
-            return false;
-        return true;
     }
 
 }
