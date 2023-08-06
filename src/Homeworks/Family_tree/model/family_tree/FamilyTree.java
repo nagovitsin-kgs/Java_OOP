@@ -90,6 +90,17 @@ public class FamilyTree<E extends FamilyTreeItemInter<E>> implements Serializabl
         }
     }
 
+    // for (Map.Entry<String,String> : map.entrySet())
+
+    // 16:53
+    // for (Map.Entry<String,String> entry : map.entrySet())
+
+    // 16:54
+    // for (String key : map.keySet())
+
+    // 16:56
+    // sb.append(map.getValue(key))
+
     public boolean addParentChildRelationships(E parent, E child) {
         if (parent == null) {
             return false;
