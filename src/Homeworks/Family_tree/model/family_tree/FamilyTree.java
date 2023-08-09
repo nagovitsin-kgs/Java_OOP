@@ -7,9 +7,12 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import Homeworks.family_tree.model.person.Human;
+// import Homeworks.family_tree.model.person.Human;
 import Homeworks.family_tree.model.person.comparators.HumanComparatorByAge;
 import Homeworks.family_tree.model.person.comparators.HumanComparatorByDateOfBirth;
 import Homeworks.family_tree.model.person.comparators.HumanComparatorByName;
+import Homeworks.family_tree.model.writer.FileHandler;
 
 public class FamilyTree<E extends FamilyTreeItemInter<E>> implements Serializable, Iterable<E> {
     private int humanId;

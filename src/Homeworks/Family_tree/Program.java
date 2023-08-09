@@ -2,7 +2,7 @@ package Homeworks.family_tree;
 
 import java.time.LocalDate;
 
-import Homeworks.dogs.Dog;
+// import Homeworks.dogs.Dog;
 import Homeworks.family_tree.model.family_tree.FamilyTree;
 import Homeworks.family_tree.model.person.Gender;
 import Homeworks.family_tree.model.person.Human;
@@ -44,19 +44,15 @@ public class Program {
         System.out.println("\nЗадание к уроку 2:________________________________\n");
 
         // Создание пути или обращение к уже созанному файлу
-        String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
-
-        // Создание конструктора файловый обработчик
-        FileHandler fileHandler = new FileHandler();
-
-        // Сохранение и создания файла с помощью методов интерфейсов и серилизации
-        fileHandler.createSaveWriteFile(familyTree, filePath);
+        getFileHandler(familyTree);
+        // System.out.println(getFileHandler(familyTree,
+        // "src/Homeworks/family_tree/model/files/familyTree.out"));
         // System.out.println(familyTree + "\n");
 
         // Чтение файла
         // FileHandler fileHandler = new FileHandler();
-        familyTree = (FamilyTree<Human>) fileHandler.readFile(filePath);
-        System.out.println(familyTree);
+        // familyTree = (FamilyTree<Human>) fileHandler.readFile(filePath);
+        // System.out.println(familyTree);
 
         System.out.println("\nЗадание к уроку 3:________________________________\n");
 
@@ -102,5 +98,24 @@ public class Program {
 
         System.out.println("SOLID");
     }
+
+    private static void getFileHandler(FamilyTree<Human> familyTree) {
+        String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
+        FileHandler fileHandler = new FileHandler();
+        fileHandler.createSaveWriteFile(familyTree, filePath);
+    }
+
+    // private static FamilyTree<Human> getFileHandler(FamilyTree<Human> familyTree,
+    // String filePath) {
+    // // String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
+    // String path = filePath;
+
+    // // Создание конструктора файловый обработчик
+    // FileHandler fileHandler = new FileHandler();
+
+    // // Сохранение и создания файла с помощью методов интерфейсов и серилизации
+    // fileHandler.createSaveWriteFile(familyTree, path);
+    // return familyTree;
+    // }
 
 }
