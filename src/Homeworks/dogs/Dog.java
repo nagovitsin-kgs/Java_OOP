@@ -14,6 +14,7 @@ public class Dog implements FamilyTreeItemInter<Dog> {
     private List<Dog> dogList;
 
     public Dog() {
+
         dogList = new ArrayList<>();
 
     }
@@ -119,6 +120,12 @@ public class Dog implements FamilyTreeItemInter<Dog> {
     public int getAge() {
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'getAge'");
+    }
+
+    @Override
+    public void getFileHandler(String filePath) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getFileHandler'");
     }
 
 }
