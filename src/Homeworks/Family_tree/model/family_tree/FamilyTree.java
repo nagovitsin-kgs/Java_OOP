@@ -7,7 +7,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import Homeworks.family_tree.model.person.Human;
 // import Homeworks.family_tree.model.person.Human;
 import Homeworks.family_tree.model.person.comparators.HumanComparatorByAge;
 import Homeworks.family_tree.model.person.comparators.HumanComparatorByDateOfBirth;
@@ -162,6 +161,17 @@ public class FamilyTree<E extends FamilyTreeItemInter<E>> implements Serializabl
         return getInfo();
     }
 
+    public void getFileHandler(String filePath) {
+        FamilyTree<E> familyTree = new FamilyTree<>();
+        for (E human : humanList) {
+            familyTree.addHuman(human);
+        }
+
+        // String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
+        FileHandler fileHandler = new FileHandler();
+        fileHandler.createSaveWriteFile(familyTree, filePath);
+        System.out.println(familyTree);
+    }
     // @Override
     // public String toString() {
     // return "FamilyTree [humanId=" + humanId + ", humanList=" + humanList +

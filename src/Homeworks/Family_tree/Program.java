@@ -7,7 +7,7 @@ import Homeworks.family_tree.model.family_tree.FamilyTree;
 import Homeworks.family_tree.model.person.Gender;
 import Homeworks.family_tree.model.person.Human;
 import Homeworks.family_tree.model.service.Service;
-import Homeworks.family_tree.model.writer.FileHandler;
+
 import Homeworks.family_tree.view.ConsoleUI;
 import Homeworks.family_tree.view.View;
 
@@ -43,10 +43,12 @@ public class Program {
 
         System.out.println("\nЗадание к уроку 2:________________________________\n");
 
+        familyTree.getFileHandler("src/Homeworks/family_tree/model/files/familyTree.out");
+
         // Создание пути или обращение к уже созанному файлу
-        getFileHandler(familyTree);
-        // System.out.println(getFileHandler(familyTree,
-        // "src/Homeworks/family_tree/model/files/familyTree.out"));
+        // String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
+        // FileHandler fileHandler = new FileHandler();
+        // fileHandler.createSaveWriteFile(familyTree, filePath);
         // System.out.println(familyTree + "\n");
 
         // Чтение файла
@@ -99,11 +101,11 @@ public class Program {
         System.out.println("SOLID");
     }
 
-    private static void getFileHandler(FamilyTree<Human> familyTree) {
-        String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
-        FileHandler fileHandler = new FileHandler();
-        fileHandler.createSaveWriteFile(familyTree, filePath);
-    }
+    // private static void getFileHandler(FamilyTree<Human> familyTree) {
+    // String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
+    // FileHandler fileHandler = new FileHandler();
+    // fileHandler.createSaveWriteFile(familyTree, filePath);
+    // }
 
     // private static FamilyTree<Human> getFileHandler(FamilyTree<Human> familyTree,
     // String filePath) {

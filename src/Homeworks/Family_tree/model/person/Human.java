@@ -6,7 +6,9 @@ import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 
+import Homeworks.family_tree.model.family_tree.FamilyTree;
 import Homeworks.family_tree.model.family_tree.FamilyTreeItemInter;
+import Homeworks.family_tree.model.writer.FileHandler;
 
 /**
  * Экземпляр класса: public Human(String name, Gender gender, LocalDate
@@ -252,6 +254,14 @@ public class Human implements Serializable, Comparable<Human>, FamilyTreeItemInt
     @Override
     public int compareTo(Human o) {
         return name.compareTo(o.name);
+    }
+
+    @Override
+    public void getFileHandler(String filePath) {
+        FamilyTree<Human> familyTree = new FamilyTree<>();
+        // String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
+        FileHandler fileHandler = new FileHandler();
+        fileHandler.createSaveWriteFile(familyTree, filePath);
     }
 
 }

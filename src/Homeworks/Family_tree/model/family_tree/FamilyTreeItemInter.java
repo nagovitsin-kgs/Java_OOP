@@ -33,4 +33,6 @@ public interface FamilyTreeItemInter<T> {
 
     int getAge();
 
+    void getFileHandler(String filePath);
+
 }
