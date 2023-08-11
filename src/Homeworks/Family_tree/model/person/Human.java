@@ -4,7 +4,9 @@ import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Period;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import Homeworks.family_tree.model.family_tree.FamilyTree;
 import Homeworks.family_tree.model.family_tree.FamilyTreeItemInter;
@@ -259,9 +261,42 @@ public class Human implements Serializable, Comparable<Human>, FamilyTreeItemInt
     @Override
     public void getFileHandler(String filePath) {
         FamilyTree<Human> familyTree = new FamilyTree<>();
+        List<Human> humanList = new ArrayList<>();
+        for (Human human : humanList) {
+            familyTree.addHuman(human);
+        }
         // String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
         FileHandler fileHandler = new FileHandler();
         fileHandler.createSaveWriteFile(familyTree, filePath);
+    }
+
+    @Override
+    public void getFilePath(String filePath) {
+        FamilyTree<Human> familyTree = new FamilyTree<>();
+        List<Human> humanList = new ArrayList<>();
+        for (Human human : humanList) {
+            familyTree.addHuman(human);
+        }
+        // String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
+        FileHandler fileHandler = new FileHandler();
+        familyTree = (FamilyTree<Human>) fileHandler.readFile(filePath);
+        System.out.println(familyTree);
+    }
+
+    @Override
+    public boolean addParentChildRelationships(Human parent, Human child) {
+        Map<Human, List<Human>> relationships = new HashMap<>();
+
+        if (parent == null) {
+            return false;
+        }
+        if (!relationships.containsKey(parent)) {
+            relationships.put(parent, new ArrayList<>());
+            relationships.get(parent).add(child);
+
+            return true;
+        }
+        return false;
     }
 
 }

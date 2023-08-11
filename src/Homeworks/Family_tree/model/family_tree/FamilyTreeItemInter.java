@@ -35,4 +35,10 @@ public interface FamilyTreeItemInter<T> {
 
     void getFileHandler(String filePath);
 
+    void getFilePath(String filePath);
+
+    boolean addParentChildRelationships(T parent, T child);
+
+    // String getInfo();
+
 }

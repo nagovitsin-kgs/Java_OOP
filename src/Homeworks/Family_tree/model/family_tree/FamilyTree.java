@@ -75,6 +75,8 @@ public class FamilyTree<E extends FamilyTreeItemInter<E>> implements Serializabl
             addToParents(human);
             addToChildren(human);
 
+            addParentChildRelationships(human, human);
+
             return true;
         }
         return false;
@@ -92,17 +94,6 @@ public class FamilyTree<E extends FamilyTreeItemInter<E>> implements Serializabl
         }
     }
 
-    // for (Map.Entry<String,String> : map.entrySet())
-
-    // 16:53
-    // for (Map.Entry<String,String> entry : map.entrySet())
-
-    // 16:54
-    // for (String key : map.keySet())
-
-    // 16:56
-    // sb.append(map.getValue(key))
-
     public boolean addParentChildRelationships(E parent, E child) {
         if (parent == null) {
             return false;
@@ -110,20 +101,21 @@ public class FamilyTree<E extends FamilyTreeItemInter<E>> implements Serializabl
         if (!relationships.containsKey(parent)) {
             relationships.put(parent, new ArrayList<>());
             relationships.get(parent).add(child);
+
             return true;
         }
         return false;
     }
 
-    public List<E> getChildrenByName(E human) {
-        List<E> children = relationships.getOrDefault(human, new ArrayList<>());
-        System.out.println("Дети у родителя " + human.getName() + ":");
-        for (E child : children) {
-            System.out.println(child.getName());
+    // public List<E> getChildrenByName(E human) {
+    // List<E> children = relationships.getOrDefault(human, new ArrayList<>());
+    // System.out.println("Дети у родителя " + human.getName() + ":");
+    // for (E child : children) {
+    // System.out.println(child.getName());
 
-        }
-        return children;
-    }
+    // }
+    // return children;
+    // }
 
     public void sortByName() {
         humanList.sort(new HumanComparatorByName<>());
@@ -151,6 +143,14 @@ public class FamilyTree<E extends FamilyTreeItemInter<E>> implements Serializabl
             sb.append(human);
             // sb.append("");
         }
+        sb.append("\n");
+        sb.append("\nВ отношениях: ");
+        sb.append(relationships.size());
+        sb.append(" объектов: \n");
+        for (Map.Entry<E, List<E>> item : relationships.entrySet()) {
+
+            sb.append(item.getKey());
+        }
 
         return sb.toString();
 
@@ -166,10 +166,20 @@ public class FamilyTree<E extends FamilyTreeItemInter<E>> implements Serializabl
         for (E human : humanList) {
             familyTree.addHuman(human);
         }
-
         // String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
         FileHandler fileHandler = new FileHandler();
         fileHandler.createSaveWriteFile(familyTree, filePath);
+        System.out.println(familyTree + "\n");
+    }
+
+    public void getFilePath(String filePath) {
+        FamilyTree<E> familyTree = new FamilyTree<>();
+        for (E human : humanList) {
+            familyTree.addHuman(human);
+        }
+        // String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
+        FileHandler fileHandler = new FileHandler();
+        familyTree = (FamilyTree<E>) fileHandler.readFile(filePath);
         System.out.println(familyTree);
     }
     // @Override

@@ -128,4 +128,16 @@ public class Dog implements FamilyTreeItemInter<Dog> {
         throw new UnsupportedOperationException("Unimplemented method 'getFileHandler'");
     }
 
+    @Override
+    public void getFilePath(String filePath) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getFilePath'");
+    }
+
+    @Override
+    public boolean addParentChildRelationships(Dog parent, Dog child) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'addParentChildRelationships'");
+    }
+
 }
