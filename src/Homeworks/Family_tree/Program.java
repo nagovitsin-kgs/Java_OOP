@@ -1,10 +1,7 @@
 package Homeworks.family_tree;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
-// import Homeworks.dogs.Dog;
 import Homeworks.family_tree.model.family_tree.FamilyTree;
 import Homeworks.family_tree.model.person.Gender;
 import Homeworks.family_tree.model.person.Human;
@@ -12,6 +9,8 @@ import Homeworks.family_tree.model.service.Service;
 
 import Homeworks.family_tree.view.ConsoleUI;
 import Homeworks.family_tree.view.View;
+
+// https://ru.wikipedia.org/wiki/Design_Patterns
 
 public class Program {
     public static void main(String[] args) {
@@ -40,7 +39,7 @@ public class Program {
         familyTree.addHuman(mex);
         familyTree.addHuman(lisa);
         familyTree.addHuman(dic);
-        System.out.println(familyTree + "\n");
+        System.out.println(familyTree);
 
         // Создание отношения родитель, ребёнок
         familyTree.addParentChildRelationships(john, bob);
@@ -55,9 +54,10 @@ public class Program {
         familyTree.addParentChildRelationships(bobi, dic);
         System.out.println(familyTree);
 
-        System.out.println("\nЗадание к уроку 2:________________________________\n");
-
+        System.out.println("Задание к уроку 2:________________________________\n");
+        // Сохранение, создание файла
         familyTree.getFileHandler("src/Homeworks/family_tree/model/files/familyTree.out");
+        System.out.println(familyTree.getInfo());
 
         // Создание пути или обращение к уже созанному файлу
         // String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
@@ -67,12 +67,13 @@ public class Program {
 
         // Чтение файла
         familyTree.getFilePath("src/Homeworks/family_tree/model/files/familyTree.out");
+        System.out.println(familyTree.getInfo());
         // FileHandler fileHandler = new FileHandler();
         // String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
         // familyTree = (FamilyTree<Human>) fileHandler.readFile(filePath);
         // System.out.println(familyTree);
 
-        System.out.println("\nЗадание к уроку 3:________________________________\n");
+        System.out.println("Задание к уроку 3:________________________________\n");
 
         // Создание конструктора для добавления людей в древо ч/з Service
         Service service = new Service();
@@ -97,7 +98,7 @@ public class Program {
         // Вывод информации по людям после сортировки по дате рождения:
         System.out.println(service.getHumansInfo());
 
-        System.out.println("\nЗадание к уроку 4:________________________________\n");
+        System.out.println("Задание к уроку 4:________________________________\n");
 
         // добавление в древо собак)
         // FamilyTree<Dog> tree = new FamilyTree<>();

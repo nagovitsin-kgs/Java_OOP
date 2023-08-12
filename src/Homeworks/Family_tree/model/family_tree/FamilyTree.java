@@ -141,19 +141,16 @@ public class FamilyTree<E extends FamilyTreeItemInter<E>> implements Serializabl
         sb.append(" объектов: \n");
         for (E human : humanList) {
             sb.append(human);
-            // sb.append("");
         }
         sb.append("\n");
-        sb.append("\nВ отношениях: ");
+        sb.append("\nВ relationships: ");
         sb.append(relationships.size());
         sb.append(" объектов: \n");
         for (Map.Entry<E, List<E>> item : relationships.entrySet()) {
-
             sb.append(item.getKey());
         }
-
+        sb.append("\n");
         return sb.toString();
-
     }
 
     @Override
@@ -169,7 +166,7 @@ public class FamilyTree<E extends FamilyTreeItemInter<E>> implements Serializabl
         // String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
         FileHandler fileHandler = new FileHandler();
         fileHandler.createSaveWriteFile(familyTree, filePath);
-        System.out.println(familyTree + "\n");
+        // System.out.println(familyTree + "\n");
     }
 
     public void getFilePath(String filePath) {
@@ -180,7 +177,7 @@ public class FamilyTree<E extends FamilyTreeItemInter<E>> implements Serializabl
         // String filePath = "src/Homeworks/family_tree/model/files/familyTree.out";
         FileHandler fileHandler = new FileHandler();
         familyTree = (FamilyTree<E>) fileHandler.readFile(filePath);
-        System.out.println(familyTree);
+        // System.out.println(familyTree);
     }
     // @Override
     // public String toString() {
